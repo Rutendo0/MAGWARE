@@ -5,38 +5,44 @@ const categories = [
   {
     name: "Power Tools",
     icon: Drill,
-    href: "/products?category=Power Tools",
-    gradient: "from-magware-purple to-magware-blue"
+    href: "/products?category=Power+Tools",
+    gradient: "from-magware-purple to-magware-blue",
+    description: "Professional grade power tools"
   },
   {
     name: "Hand Tools", 
     icon: Hammer,
-    href: "/products?category=Hand Tools",
-    gradient: "from-magware-blue to-magware-secondary"
+    href: "/products?category=Hand+Tools",
+    gradient: "from-magware-blue to-purple-600",
+    description: "Quality hand tools & equipment"
   },
   {
     name: "Plumbing",
     icon: Wrench,
     href: "/products?category=Plumbing", 
-    gradient: "from-magware-secondary to-magware-purple"
+    gradient: "from-blue-600 to-magware-purple",
+    description: "Complete plumbing solutions"
   },
   {
     name: "Paints",
     icon: PaintBucket,
-    href: "/products?category=Paints & Finishes",
-    gradient: "from-magware-purple to-magware-blue"
+    href: "/products?category=Paints+%26+Finishes",
+    gradient: "from-magware-purple to-magware-blue",
+    description: "Premium paints & finishes"
   },
   {
     name: "Solar",
     icon: Zap,
-    href: "/products?category=Solar Equipment",
-    gradient: "from-magware-blue to-magware-secondary"
+    href: "/products?category=Solar+Equipment",
+    gradient: "from-yellow-500 to-orange-500",
+    description: "Solar energy solutions"
   },
   {
     name: "Materials",
     icon: Building,
-    href: "/products?category=Building Materials",
-    gradient: "from-magware-secondary to-magware-purple"
+    href: "/products?category=Building+Materials",
+    gradient: "from-gray-600 to-magware-purple",
+    description: "Construction materials"
   }
 ];
 
@@ -57,14 +63,17 @@ export default function FeaturedCategories() {
             return (
               <Link key={category.name} href={category.href}>
                 <div className="group cursor-pointer">
-                  <div className={`bg-gradient-to-br ${category.gradient} p-8 rounded-2xl text-center hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105`}>
-                    <div className="bg-white/20 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                      <IconComponent className="text-white h-8 w-8" />
+                  <div className={`bg-gradient-to-br ${category.gradient} p-8 rounded-3xl text-center hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 relative overflow-hidden`}>
+                    <div className="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
+                    <div className="bg-white/20 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center relative z-10 group-hover:bg-white/30 transition-colors duration-300">
+                      <IconComponent className="text-white h-8 w-8 drop-shadow-lg" />
                     </div>
-                    <h4 className="text-white font-bold text-lg">{category.name}</h4>
-                    <div className="mt-3 text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h4 className="text-white font-bold text-lg mb-2 relative z-10">{category.name}</h4>
+                    <p className="text-white/70 text-xs mb-3 relative z-10">{category.description}</p>
+                    <div className="text-white/90 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 relative z-10 font-semibold">
                       Shop Now →
                     </div>
+                    <div className="absolute bottom-0 right-0 w-20 h-20 bg-white/10 rounded-full transform translate-x-10 translate-y-10 group-hover:scale-150 transition-transform duration-500"></div>
                   </div>
                 </div>
               </Link>

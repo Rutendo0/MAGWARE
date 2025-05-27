@@ -27,12 +27,16 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-6">
-              <div className="magware-gradient p-3 rounded-lg mr-4">
-                <Building2 className="text-white h-8 w-8" />
+              <div className="bg-gradient-to-br from-magware-purple via-blue-600 to-magware-blue p-4 rounded-xl shadow-lg mr-4 relative overflow-hidden">
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                <Building2 className="text-white h-10 w-10 relative z-10 drop-shadow-lg" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
               </div>
               <div>
-                <h4 className="text-2xl font-bold text-magware-purple">MAGWARE</h4>
-                <p className="text-sm text-gray-400">Hardware Store</p>
+                <h4 className="text-3xl font-bold bg-gradient-to-r from-magware-purple to-blue-600 bg-clip-text text-transparent">
+                  MAGWARE
+                </h4>
+                <p className="text-sm text-gray-400 font-medium tracking-wide">Professional Hardware Store</p>
               </div>
             </div>
             <p className="text-gray-400 mb-6">

@@ -47,10 +47,10 @@ export default function FeaturedProducts() {
         </div>
 
         {isLoading ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {Array.from({ length: 4 }).map((_, i) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {Array.from({ length: 6 }).map((_, i) => (
               <Card key={i} className="animate-pulse">
-                <div className="h-48 bg-gray-200"></div>
+                <div className="h-56 bg-gray-200"></div>
                 <CardContent className="p-6">
                   <div className="h-4 bg-gray-200 mb-2"></div>
                   <div className="h-3 bg-gray-200 mb-4"></div>
@@ -60,14 +60,14 @@ export default function FeaturedProducts() {
             ))}
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {products.map((product: any) => (
-              <Card key={product.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-                <div className="relative overflow-hidden">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.slice(0, 6).map((product: any) => (
+              <Card key={product.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 group border-0 ring-1 ring-gray-100 hover:ring-magware-purple/20">
+                <div className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100">
                   <img
-                    src={product.imageUrl || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400"}
+                    src={product.imageUrl?.replace('@assets/', '/attached_assets/') || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400"}
                     alt={product.name}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   {product.featured && (
                     <Badge className="absolute top-4 left-4 bg-magware-purple text-white">

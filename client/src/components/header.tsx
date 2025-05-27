@@ -22,10 +22,10 @@ export default function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/products", label: "Products" },
-    { href: "/products?category=Power Tools", label: "Power Tools" },
-    { href: "/products?category=Building Materials", label: "Building Materials" },
+    { href: "/products?category=Power+Tools", label: "Power Tools" },
+    { href: "/products?category=Building+Materials", label: "Building Materials" },
     { href: "/products?category=Plumbing", label: "Plumbing" },
-    { href: "/products?category=Solar Equipment", label: "Solar Equipment" },
+    { href: "/products?category=Solar+Equipment", label: "Solar Equipment" },
     { href: "/b2b-portal", label: "B2B Portal" },
   ];
 
@@ -64,12 +64,16 @@ export default function Header() {
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <div className="magware-gradient p-3 rounded-lg mr-4">
-                <Building2 className="text-white h-8 w-8" />
+              <div className="bg-gradient-to-br from-magware-purple via-blue-600 to-magware-blue p-4 rounded-xl shadow-lg mr-4 relative overflow-hidden">
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                <Building2 className="text-white h-10 w-10 relative z-10 drop-shadow-lg" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-magware-purple">MAGWARE</h1>
-                <p className="text-sm text-magware-gray">Hardware Store</p>
+                <h1 className="text-3xl font-bold bg-gradient-to-r from-magware-purple to-blue-600 bg-clip-text text-transparent">
+                  MAGWARE
+                </h1>
+                <p className="text-sm text-magware-gray font-medium tracking-wide">Professional Hardware Store</p>
               </div>
             </Link>
 

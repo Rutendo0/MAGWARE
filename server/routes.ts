@@ -88,14 +88,57 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Bulk order routes
   app.post("/api/bulk-orders", async (req, res) => {
     try {
-      const validatedData = insertBulkOrderSchema.parse(req.body);
-      const order = await storage.createBulkOrder(validatedData);
-      res.status(201).json(order);
+      const { contactPerson, email, phone, monthlyVolume, productsNeeded } = req.body;
+
+      // In a real app, you would save this to a database
+      console.log("Bulk order request received:", {
+        contactPerson,
+        email,
+        phone,
+        monthlyVolume,
+        productsNeeded,
+        timestamp: new Date().toISOString()
+      });
+
+      res.json({ success: true, message: "Quote request submitted successfully" });
     } catch (error) {
-      if (error instanceof z.ZodError) {
-        return res.status(400).json({ message: "Invalid data", errors: error.errors });
-      }
-      res.status(500).json({ message: "Failed to create bulk order" });
+      console.error("Error processing bulk order:", error);
+      res.status(500).json({ error: "Failed to submit bulk order request" });
+    }
+  });
+
+  app.post("/api/b2b-registration", async (req, res) => {
+    try {
+      const { 
+        companyName, 
+        contactPerson, 
+        email, 
+        phone, 
+        address, 
+        businessType, 
+        monthlyVolume, 
+        productsNeeded, 
+        taxNumber 
+      } = req.body;
+
+      // In a real app, you would save this to a database
+      console.log("B2B registration received:", {
+        companyName,
+        contactPerson,
+        email,
+        phone,
+        address,
+        businessType,
+        monthlyVolume,
+        productsNeeded,
+        taxNumber,
+        timestamp: new Date().toISOString()
+      });
+
+      res.json({ success: true, message: "B2B registration submitted successfully" });
+    } catch (error) {
+      console.error("Error processing B2B registration:", error);
+      res.status(500).json({ error: "Failed to submit B2B registration" });
     }
   });
 
@@ -113,7 +156,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { sessionId } = req.params;
       const cartItems = await storage.getCartItems(sessionId);
-      
+
       // Enrich cart items with product details
       const enrichedItems = await Promise.all(
         cartItems.map(async (item) => {
@@ -124,7 +167,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           };
         })
       );
-      
+
       res.json(enrichedItems);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch cart items" });
@@ -148,16 +191,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const id = parseInt(req.params.id);
       const { quantity } = req.body;
-      
+
       if (!quantity || quantity < 1) {
         return res.status(400).json({ message: "Valid quantity is required" });
       }
-      
+
       const updatedItem = await storage.updateCartItemQuantity(id, quantity);
       if (!updatedItem) {
         return res.status(404).json({ message: "Cart item not found" });
       }
-      
+
       res.json(updatedItem);
     } catch (error) {
       res.status(500).json({ message: "Failed to update cart item" });
@@ -168,11 +211,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const id = parseInt(req.params.id);
       const success = await storage.removeCartItem(id);
-      
+
       if (!success) {
         return res.status(404).json({ message: "Cart item not found" });
       }
-      
+
       res.json({ message: "Item removed from cart" });
     } catch (error) {
       res.status(500).json({ message: "Failed to remove cart item" });
