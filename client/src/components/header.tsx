@@ -71,7 +71,7 @@ export default function Header() {
                   <div className="w-2 h-2 bg-white rounded-full"></div>
                 </div>
                 {/* Professional badge */}
-      
+              </div>
               <div className="flex flex-col">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-black bg-gradient-to-r from-red-600 via-orange-600 to-amber-600 bg-clip-text text-transparent tracking-tight leading-none drop-shadow-sm">
                   MAGWARE
