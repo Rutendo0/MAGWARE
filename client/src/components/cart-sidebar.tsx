@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
+import { useLocation } from "wouter";
 import { ShoppingCart, Plus, Minus, Trash2, X } from "lucide-react";
 
 export default function CartSidebar() {
@@ -17,6 +18,7 @@ export default function CartSidebar() {
     setIsCartOpen 
   } = useCart();
   const { toast } = useToast();
+  const [, setLocation] = useLocation();
 
   const handleQuantityChange = async (itemId: number, newQuantity: number) => {
     if (newQuantity < 1) return;
@@ -109,7 +111,10 @@ export default function CartSidebar() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Your cart is empty</h3>
               <p className="text-gray-500 mb-4">Add some products to get started!</p>
               <Button
-                onClick={() => setIsCartOpen(false)}
+                onClick={() => {
+                  setIsCartOpen(false);
+                  setLocation('/products');
+                }}
                 className="bg-magware-purple hover:bg-magware-purple-dark"
               >
                 Continue Shopping
