@@ -88,7 +88,7 @@ export class MemStorage implements IStorage {
         price: "18.50",
         category: "Paints & Finishes",
         brand: "Splash",
-        imageUrl: "@assets/IMG-20250419-WA0010.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0022.jpg",
         inStock: true,
         featured: true,
         specifications: "Weather resistant, glossy finish, suitable for all wood types"
@@ -217,10 +217,263 @@ export class MemStorage implements IStorage {
         price: "22.00",
         category: "Building Materials",
         brand: "Rhi-Bond",
-        imageUrl: "@assets/IMG-20250419-WA0020.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0026.jpg",
         inStock: true,
         featured: false,
         specifications: "15 year warranty, 100% assurance, suitable for all wall types"
+      },
+
+      // Additional WhatsApp Image Products from your collection
+      {
+        name: "Professional Hardware Tools Set",
+        description: "Complete set of professional hardware tools for construction",
+        price: "75.00",
+        category: "Hand Tools",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.14.jpeg",
+        inStock: true,
+        featured: true,
+        specifications: "High-quality steel construction, ergonomic handles"
+      },
+
+      {
+        name: "Paint Brushes & Rollers Set",
+        description: "Premium paint application tools for professional results",
+        price: "28.00",
+        category: "Paints & Finishes",
+        brand: "Professional",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.15.jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Various sizes, synthetic bristles, smooth finish rollers"
+      },
+
+      {
+        name: "Electrical Wiring Components",
+        description: "Complete electrical wiring supplies and components",
+        price: "45.00",
+        category: "Electrical",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.16.jpeg",
+        inStock: true,
+        featured: true,
+        specifications: "Copper wiring, safety certified, various gauges available"
+      },
+
+      {
+        name: "Plumbing Fittings & Pipes",
+        description: "High-quality plumbing supplies for residential and commercial use",
+        price: "65.00",
+        category: "Plumbing",
+        brand: "Professional",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.17.jpeg",
+        inStock: true,
+        featured: true,
+        specifications: "PVC and metal fittings, various pipe sizes, leak-proof joints"
+      },
+
+      {
+        name: "Construction Adhesives & Sealants",
+        description: "Industrial-grade adhesives and sealants for construction",
+        price: "32.00",
+        category: "Building Materials",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.18.jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Weather resistant, fast curing, multi-surface compatibility"
+      },
+
+      {
+        name: "Security Hardware & Locks",
+        description: "Premium security hardware for doors and windows",
+        price: "85.00",
+        category: "Security",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.19.jpeg",
+        inStock: true,
+        featured: true,
+        specifications: "High-security locks, anti-pick technology, weather resistant"
+      },
+
+      {
+        name: "Garden & Outdoor Tools",
+        description: "Complete collection of garden and outdoor maintenance tools",
+        price: "55.00",
+        category: "Garden Tools",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.20.jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Rust-resistant coating, ergonomic design, professional grade"
+      },
+
+      {
+        name: "Measuring & Level Tools",
+        description: "Precision measuring and leveling tools for accurate work",
+        price: "42.00",
+        category: "Hand Tools",
+        brand: "Professional",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.21.jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "High accuracy, bubble levels, metric and imperial measurements"
+      },
+
+      {
+        name: "Fasteners & Hardware Assortment",
+        description: "Comprehensive assortment of bolts, screws, and fasteners",
+        price: "38.00",
+        category: "Fasteners",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.14.jpeg",
+        inStock: true,
+        featured: true,
+        specifications: "Stainless steel, various sizes, corrosion resistant"
+      },
+
+      {
+        name: "Insulation Materials",
+        description: "High-performance insulation materials for energy efficiency",
+        price: "48.00",
+        category: "Building Materials",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.15.jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Fire retardant, moisture resistant, easy installation"
+      },
+
+      {
+        name: "Roofing Materials & Supplies",
+        description: "Complete roofing solutions for residential and commercial buildings",
+        price: "125.00",
+        category: "Roofing",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.16.jpeg",
+        inStock: true,
+        featured: true,
+        specifications: "Weather resistant, long-lasting, various materials available"
+      },
+
+      {
+        name: "Concrete & Masonry Tools",
+        description: "Professional tools for concrete and masonry work",
+        price: "68.00",
+        category: "Hand Tools",
+        brand: "Professional",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.17.jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Heavy-duty construction, precision finishing, ergonomic handles"
+      },
+
+      {
+        name: "Safety Equipment & Gear",
+        description: "Essential safety equipment for construction and workshop use",
+        price: "52.00",
+        category: "Safety",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.18.jpeg",
+        inStock: true,
+        featured: true,
+        specifications: "Safety certified, protective gear, high-visibility options"
+      },
+
+      {
+        name: "Flooring Installation Tools",
+        description: "Specialized tools for professional flooring installation",
+        price: "78.00",
+        category: "Hand Tools",
+        brand: "Professional",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.20.jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Precision cutting, smooth installation, professional results"
+      },
+
+      {
+        name: "Window & Door Hardware",
+        description: "Complete hardware solutions for windows and doors",
+        price: "62.00",
+        category: "Hardware",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.21.jpeg",
+        inStock: true,
+        featured: true,
+        specifications: "Smooth operation, weather sealed, adjustable fittings"
+      },
+
+      {
+        name: "Ventilation & HVAC Supplies",
+        description: "Ventilation and HVAC components for climate control",
+        price: "95.00",
+        category: "HVAC",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.22.jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Energy efficient, quiet operation, easy installation"
+      },
+
+      {
+        name: "Drainage & Gutter Systems",
+        description: "Complete drainage solutions and gutter systems",
+        price: "88.00",
+        category: "Plumbing",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.23.jpeg",
+        inStock: true,
+        featured: true,
+        specifications: "Corrosion resistant, efficient water flow, easy maintenance"
+      },
+
+      {
+        name: "Lighting Fixtures & Electrical",
+        description: "Modern lighting fixtures and electrical components",
+        price: "72.00",
+        category: "Electrical",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.24.jpeg",
+        inStock: true,
+        featured: true,
+        specifications: "LED compatible, energy efficient, modern designs"
+      },
+
+      {
+        name: "Storage & Organization Systems",
+        description: "Professional storage and organization solutions",
+        price: "58.00",
+        category: "Storage",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.25.jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Heavy-duty construction, modular design, space efficient"
+      },
+
+      {
+        name: "Welding & Metal Work Supplies",
+        description: "Complete welding and metalwork supplies for professionals",
+        price: "145.00",
+        category: "Welding",
+        brand: "Professional",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.27.jpeg",
+        inStock: true,
+        featured: true,
+        specifications: "Professional grade, various rod types, safety equipment included"
+      },
+
+      {
+        name: "Automotive & Machinery Tools",
+        description: "Specialized tools for automotive and machinery maintenance",
+        price: "115.00",
+        category: "Automotive Tools",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.29.jpeg",
+        inStock: true,
+        featured: true,
+        specifications: "Precision tools, heavy-duty construction, professional grade"
       }
     ];
 
@@ -438,7 +691,9 @@ export class MemStorage implements IStorage {
 
     const id = this.currentCartItemId++;
     const cartItem: CartItem = { 
-      ...insertItem, 
+      sessionId: insertItem.sessionId,
+      productId: insertItem.productId ?? null,
+      quantity: insertItem.quantity ?? null,
       id,
       addedAt: new Date()
     };
