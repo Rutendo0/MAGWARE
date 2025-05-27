@@ -161,3 +161,8 @@
     border-color: hsl(var(--magware-purple));
   }
 }
+
+/* Text clarity utilities */
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

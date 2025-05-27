@@ -57,23 +57,39 @@ export default function FeaturedCategories() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {categories.map((category) => {
             const IconComponent = category.icon;
             return (
               <Link key={category.name} href={category.href}>
                 <div className="group cursor-pointer">
-                  <div className={`bg-gradient-to-br ${category.gradient} p-8 rounded-3xl text-center hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 relative overflow-hidden`}>
-                    <div className="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
-                    <div className="bg-white/20 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center relative z-10 group-hover:bg-white/30 transition-colors duration-300">
-                      <IconComponent className="text-white h-8 w-8 drop-shadow-lg" />
+                  <div className={`bg-gradient-to-br ${category.gradient} p-6 rounded-2xl text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 relative overflow-hidden border border-white/20 backdrop-blur-sm`}>
+                    {/* Enhanced overlay for better clarity */}
+                    <div className="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
+                    
+                    {/* Clear icon container */}
+                    <div className="bg-white/25 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center relative z-10 group-hover:bg-white/35 transition-all duration-300 shadow-lg border border-white/30">
+                      <IconComponent className="text-white h-8 w-8 drop-shadow-2xl" />
                     </div>
-                    <h4 className="text-white font-bold text-lg mb-2 relative z-10">{category.name}</h4>
-                    <p className="text-white/70 text-xs mb-3 relative z-10">{category.description}</p>
-                    <div className="text-white/90 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 relative z-10 font-semibold">
+                    
+                    {/* Clear title with better contrast */}
+                    <h4 className="text-white font-bold text-base mb-2 relative z-10 drop-shadow-lg text-shadow-lg">
+                      {category.name}
+                    </h4>
+                    
+                    {/* Clear description with better readability */}
+                    <p className="text-white/90 text-xs mb-3 relative z-10 drop-shadow-md font-medium">
+                      {category.description}
+                    </p>
+                    
+                    {/* Clear call to action */}
+                    <div className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 relative z-10 font-bold drop-shadow-lg">
                       Shop Now →
                     </div>
-                    <div className="absolute bottom-0 right-0 w-20 h-20 bg-white/10 rounded-full transform translate-x-10 translate-y-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    {/* Subtle decorative element */}
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-white/10 rounded-full transform translate-x-8 -translate-y-8 group-hover:scale-125 transition-transform duration-500"></div>
+                    <div className="absolute bottom-0 left-0 w-12 h-12 bg-white/5 rounded-full transform -translate-x-6 translate-y-6 group-hover:scale-150 transition-transform duration-700"></div>
                   </div>
                 </div>
               </Link>
