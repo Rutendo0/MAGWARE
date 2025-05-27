@@ -14,7 +14,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { Building2, Users, TrendingUp, Clock, CheckCircle, Webhook, ArrowLeft, CreditCard, Truck, Shield, Zap } from "lucide-react";
+import { Building2, Users, TrendingUp, Clock, CheckCircle, Webhook, ArrowLeft, CreditCard, Truck, Shield, Zap, Settings, Mail, Database } from "lucide-react";
 
 const b2bRegistrationSchema = z.object({
   companyName: z.string().min(2, "Company name must be at least 2 characters"),
@@ -81,9 +81,19 @@ export default function B2BPortal() {
       description: "Up to 25% off on bulk orders"
     },
     {
-      icon: Users,
-      title: "Dedicated Account Manager",
-      description: "Personal support for your business needs"
+      icon: Database,
+      title: "ERP Integration",
+      description: "SAP, QuickBooks, Coupa connectivity"
+    },
+    {
+      icon: Settings,
+      title: "PunchOut Catalog",
+      description: "Direct procurement system integration"
+    },
+    {
+      icon: Mail,
+      title: "Email-to-Order",
+      description: "Automated order processing from emails"
     },
     {
       icon: Truck,
@@ -94,16 +104,6 @@ export default function B2BPortal() {
       icon: Shield,
       title: "Credit Terms",
       description: "30-day payment terms available"
-    },
-    {
-      icon: Zap,
-      title: "API Integration",
-      description: "Connect your procurement systems"
-    },
-    {
-      icon: Building2,
-      title: "Custom Solutions",
-      description: "Tailored product packages"
     }
   ];
 
@@ -166,6 +166,92 @@ export default function B2BPortal() {
                 </Card>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Procurement Integration Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-6">Streamlined Procurement Integration</h2>
+            <p className="text-xl text-gray-600">
+              Connect your existing procurement systems seamlessly with MAGWARE's automated ordering platform
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <Card className="p-6">
+              <CardContent>
+                <div className="bg-blue-100 rounded-full p-3 w-12 h-12 mb-4 flex items-center justify-center">
+                  <Database className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">ERP System Integration</h3>
+                <p className="text-gray-600 mb-4">Direct connection to SAP, Oracle, QuickBooks, and other enterprise systems</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Real-time inventory sync</li>
+                  <li>• Automated purchase orders</li>
+                  <li>• Budget approval workflows</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6">
+              <CardContent>
+                <div className="bg-green-100 rounded-full p-3 w-12 h-12 mb-4 flex items-center justify-center">
+                  <Mail className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Email-to-Order Automation</h3>
+                <p className="text-gray-600 mb-4">Send orders via email and let our system process them automatically</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Smart order parsing</li>
+                  <li>• Automatic price calculations</li>
+                  <li>• Instant order confirmations</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6">
+              <CardContent>
+                <div className="bg-purple-100 rounded-full p-3 w-12 h-12 mb-4 flex items-center justify-center">
+                  <Settings className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">PunchOut Catalog</h3>
+                <p className="text-gray-600 mb-4">Browse and order directly from your procurement platform</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Coupa integration ready</li>
+                  <li>• Ariba network compatible</li>
+                  <li>• Custom catalog configurations</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold mb-4 text-center">How It Works</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="bg-magware-purple/10 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-magware-purple">1</span>
+                </div>
+                <h4 className="font-semibold mb-2">Connect Systems</h4>
+                <p className="text-gray-600">We integrate with your existing procurement workflow using industry-standard APIs</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-magware-purple/10 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-magware-purple">2</span>
+                </div>
+                <h4 className="font-semibold mb-2">Automate Orders</h4>
+                <p className="text-gray-600">Orders flow automatically from your system to ours, with real-time confirmations</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-magware-purple/10 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-magware-purple">3</span>
+                </div>
+                <h4 className="font-semibold mb-2">Fast Fulfillment</h4>
+                <p className="text-gray-600">Same-day processing and delivery for all integrated bulk orders</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

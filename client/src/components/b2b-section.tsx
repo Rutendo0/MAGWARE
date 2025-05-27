@@ -80,11 +80,15 @@ export default function B2BSection() {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="text-yellow-400 mr-4 h-5 w-5 flex-shrink-0" />
-                <span className="text-lg">Dedicated account manager</span>
+                <span className="text-lg">SAP, QuickBooks & Coupa integration</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="text-yellow-400 mr-4 h-5 w-5 flex-shrink-0" />
-                <span className="text-lg">API integration for procurement systems</span>
+                <span className="text-lg">PunchOut catalog support</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="text-yellow-400 mr-4 h-5 w-5 flex-shrink-0" />
+                <span className="text-lg">Email-to-order automation</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="text-yellow-400 mr-4 h-5 w-5 flex-shrink-0" />
