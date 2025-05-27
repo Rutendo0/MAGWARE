@@ -25,11 +25,14 @@
   --radius: 0.5rem;
 
   /* MAGWARE Brand Colors */
-  --magware-purple: 258 90% 66%; /* #8B5CF6 */
-  --magware-purple-dark: 258 75% 55%; /* #6D28D9 */
-  --magware-blue: 214 95% 60%; /* #3B82F6 */
-  --magware-secondary: 258 94% 71%; /* #A855F7 */
-  --magware-gray: 215 16% 47%; /* #64748B */
+  --magware-purple: #7C3AED;
+  --magware-purple-dark: #5B21B6;
+  --magware-purple-light: #A855F7;
+  --magware-blue: #3B82F6;
+  --magware-blue-dark: #1D4ED8;
+  --magware-gray: #64748B;
+  --magware-gray-light: #94A3B8;
+  --magware-gray-dark: #475569;
 }
 
 .dark {
@@ -66,13 +69,29 @@
 
 @layer components {
   .magware-gradient {
-    background: linear-gradient(135deg, hsl(var(--magware-purple)), hsl(var(--magware-blue)));
+    background: linear-gradient(135deg, var(--magware-purple) 0%, var(--magware-blue) 100%);
   }
-  
+
+  .professional-card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-gray-200;
+  }
+
+  .professional-gradient {
+    background: linear-gradient(135deg, var(--magware-purple) 0%, #6366F1 50%, var(--magware-blue) 100%);
+  }
+
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .professional-button {
+    @apply bg-gradient-to-r from-magware-purple to-blue-600 hover:from-magware-purple-dark hover:to-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105;
+  }
+
   .magware-gradient-secondary {
     background: linear-gradient(135deg, hsl(var(--magware-blue)), hsl(var(--magware-secondary)));
   }
-  
+
   .magware-text-gradient {
     background: linear-gradient(135deg, hsl(var(--magware-purple)), hsl(var(--magware-blue)));
     -webkit-background-clip: text;
@@ -85,59 +104,59 @@
   .text-magware-purple {
     color: hsl(var(--magware-purple));
   }
-  
+
   .text-magware-purple-dark {
     color: hsl(var(--magware-purple-dark));
   }
-  
+
   .text-magware-blue {
     color: hsl(var(--magware-blue));
   }
-  
+
   .text-magware-secondary {
     color: hsl(var(--magware-secondary));
   }
-  
+
   .text-magware-gray {
     color: hsl(var(--magware-gray));
   }
-  
+
   .bg-magware-purple {
     background-color: hsl(var(--magware-purple));
   }
-  
+
   .bg-magware-purple-dark {
     background-color: hsl(var(--magware-purple-dark));
   }
-  
+
   .bg-magware-blue {
     background-color: hsl(var(--magware-blue));
   }
-  
+
   .bg-magware-secondary {
     background-color: hsl(var(--magware-secondary));
   }
-  
+
   .bg-magware-gray {
     background-color: hsl(var(--magware-gray));
   }
-  
+
   .border-magware-purple {
     border-color: hsl(var(--magware-purple));
   }
-  
+
   .border-magware-blue {
     border-color: hsl(var(--magware-blue));
   }
-  
+
   .hover\:bg-magware-purple-dark:hover {
     background-color: hsl(var(--magware-purple-dark));
   }
-  
+
   .hover\:text-magware-purple:hover {
     color: hsl(var(--magware-purple));
   }
-  
+
   .hover\:border-magware-purple:hover {
     border-color: hsl(var(--magware-purple));
   }

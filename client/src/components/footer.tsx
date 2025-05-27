@@ -27,16 +27,23 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-6">
-              <div className="bg-gradient-to-br from-magware-purple via-blue-600 to-magware-blue p-4 rounded-xl shadow-lg mr-4 relative overflow-hidden">
-                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
-                <Building2 className="text-white h-10 w-10 relative z-10 drop-shadow-lg" />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+              <div className="relative mr-4">
+                <div className="bg-gradient-to-br from-magware-purple via-blue-600 to-magware-blue p-3 rounded-2xl shadow-xl border border-white/10">
+                  <div className="absolute inset-0 bg-white/5 rounded-2xl"></div>
+                  <Building2 className="text-white h-8 w-8 relative z-10 drop-shadow-2xl" />
+                </div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full shadow-lg"></div>
               </div>
               <div>
-                <h4 className="text-3xl font-bold bg-gradient-to-r from-magware-purple to-blue-600 bg-clip-text text-transparent">
+                <h4 className="text-2xl font-black text-white mb-1">
                   MAGWARE
                 </h4>
-                <p className="text-sm text-gray-400 font-medium tracking-wide">Professional Hardware Store</p>
+                <div className="flex items-center space-x-2">
+                  <div className="h-0.5 w-6 bg-gradient-to-r from-magware-purple to-blue-600"></div>
+                  <p className="text-xs text-gray-400 font-semibold tracking-wider uppercase">
+                    Professional Hardware
+                  </p>
+                </div>
               </div>
             </div>
             <p className="text-gray-400 mb-6">
