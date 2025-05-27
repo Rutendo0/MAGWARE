@@ -3,6 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useLocation } from "wouter";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,7 +14,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { Building2, Users, TrendingUp, Clock, CheckCircle, Webhook } from "lucide-react";
+import { Building2, Users, TrendingUp, Clock, CheckCircle, Webhook, ArrowLeft } from "lucide-react";
 
 const bulkOrderSchema = z.object({
   contactPerson: z.string().min(2, "Contact person name is required"),
@@ -25,6 +26,7 @@ const bulkOrderSchema = z.object({
 
 export default function B2BPortal() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [location, setLocation] = useLocation();
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof bulkOrderSchema>>({
@@ -71,6 +73,16 @@ export default function B2BPortal() {
       <section className="magware-gradient text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="flex justify-center mb-6">
+              <Button
+                variant="ghost"
+                onClick={() => setLocation('/')}
+                className="text-white hover:text-yellow-400 hover:bg-white/10"
+              >
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Home
+              </Button>
+            </div>
             <h1 className="text-5xl font-bold mb-6">B2B Portal</h1>
             <p className="text-xl mb-8 text-purple-100">
               Streamlined procurement solutions for construction companies and contractors
