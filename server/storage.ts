@@ -9,24 +9,24 @@ export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
-  
+
   createCompany(company: InsertCompany): Promise<Company>;
   getCompanyById(id: number): Promise<Company | undefined>;
-  
+
   getProducts(): Promise<Product[]>;
   getProductById(id: number): Promise<Product | undefined>;
   getProductsByCategory(category: string): Promise<Product[]>;
   getFeaturedProducts(): Promise<Product[]>;
   searchProducts(query: string): Promise<Product[]>;
   createProduct(product: InsertProduct): Promise<Product>;
-  
+
   getSolarPackages(): Promise<SolarPackage[]>;
   getSolarPackageById(id: number): Promise<SolarPackage | undefined>;
   createSolarPackage(solarPackage: InsertSolarPackage): Promise<SolarPackage>;
-  
+
   createBulkOrder(order: InsertBulkOrder): Promise<BulkOrder>;
   getBulkOrders(): Promise<BulkOrder[]>;
-  
+
   getCartItems(sessionId: string): Promise<CartItem[]>;
   addCartItem(item: InsertCartItem): Promise<CartItem>;
   updateCartItemQuantity(id: number, quantity: number): Promise<CartItem | undefined>;
@@ -61,7 +61,7 @@ export class MemStorage implements IStorage {
     this.currentSolarPackageId = 1;
     this.currentBulkOrderId = 1;
     this.currentCartItemId = 1;
-    
+
     this.initializeData();
   }
 
@@ -80,7 +80,7 @@ export class MemStorage implements IStorage {
         featured: true,
         specifications: "LED technology, multiple designs available, energy efficient"
       },
-      
+
       // Paint & Varnish
       {
         name: "Splash Wood Varnish - Glossy Finish",
@@ -93,7 +93,7 @@ export class MemStorage implements IStorage {
         featured: true,
         specifications: "Weather resistant, glossy finish, suitable for all wood types"
       },
-      
+
       // Tile Grout & Adhesives
       {
         name: "MAG-GRIP Tile Grout - Fast Set",
@@ -106,7 +106,7 @@ export class MemStorage implements IStorage {
         featured: true,
         specifications: "Quick curing 2-4 hours, premixed powder form, smooth application"
       },
-      
+
       {
         name: "MAG-GRIP Tile Grout - Red Fast Set",
         description: "Premium tile grout with fast-set formula, 5kg bag",
@@ -118,7 +118,7 @@ export class MemStorage implements IStorage {
         featured: false,
         specifications: "Fast set easy application, bond strength for ceramic & stone"
       },
-      
+
       {
         name: "MAG-GRIP Porcelain Epoxy Grout",
         description: "Professional epoxy grout for porcelain and ceramic installations",
@@ -130,7 +130,7 @@ export class MemStorage implements IStorage {
         featured: false,
         specifications: "Incomparable strength, extremely low maintenance, easy to clean"
       },
-      
+
       // Bulk Tile Tools
       {
         name: "Professional Tiling Tools Set",
@@ -144,7 +144,7 @@ export class MemStorage implements IStorage {
         featured: true,
         specifications: "Bulk pricing available, professional grade tools"
       },
-      
+
       // Power Tools - WADFOW Grass Trimmer
       {
         name: "WADFOW Gasoline Grass Trimmer 62cc",
@@ -158,7 +158,7 @@ export class MemStorage implements IStorage {
         featured: true,
         specifications: "62cc displacement, 3.8HP, 9000rpm max speed, includes line spool & blade"
       },
-      
+
       // Solar Equipment
       {
         name: "Complete Solar Equipment & Installation Package",
@@ -171,7 +171,7 @@ export class MemStorage implements IStorage {
         featured: true,
         specifications: "Complete installation package, refer clients & earn cash back"
       },
-      
+
       // TOTAL Power Tools
       {
         name: "TOTAL Professional Power Tools & Equipment",
@@ -184,7 +184,7 @@ export class MemStorage implements IStorage {
         featured: true,
         specifications: "Professional grade tools, refer clients & earn cash back"
       },
-      
+
       // WADFOW Power Tools Set
       {
         name: "WADFOW Professional Power Tool Kit",
@@ -197,7 +197,7 @@ export class MemStorage implements IStorage {
         featured: true,
         specifications: "Impact function, 20V batteries, complete tool case, drill bits included"
       },
-      
+
       // Plaster Products
       {
         name: "Rhi-Lite Ceiling Plaster 20kg",
@@ -210,7 +210,7 @@ export class MemStorage implements IStorage {
         featured: false,
         specifications: "15 year warranty, 100% assurance, high strength interior/exterior"
       },
-      
+
       {
         name: "Rhi-Bond Wall Plaster 20kg", 
         description: "Professional wall plaster for interior and exterior applications",

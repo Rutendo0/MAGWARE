@@ -51,14 +51,22 @@ export default function Products() {
   }, [location]);
 
   const { data: products = [], isLoading } = useQuery({
-    queryKey: ["/api/products"],
+    queryKey: ["/api/products", selectedCategory],
+    queryFn: async () => {
+      if (selectedCategory === "All Categories") {
+        const response = await fetch("/api/products");
+        return response.json();
+      } else {
+        const response = await fetch(`/api/products/category/${encodeURIComponent(selectedCategory)}`);
+        return response.json();
+      }
+    },
   });
 
   const filteredProducts = products.filter((product: any) => {
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === "All Categories" || product.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+    return matchesSearch;
   });
 
   const handleAddToCart = async (productId: number, productName: string) => {
@@ -144,9 +152,10 @@ export default function Products() {
               <Card key={product.id} className="hover:shadow-xl transition-shadow group">
                 <div className="relative overflow-hidden">
                   <img
-                    src={product.imageUrl || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400"}
+                    src={product.imageUrl?.replace('@assets/', '/attached_assets/') || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400"}
                     alt={product.name}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                   {product.featured && (
                     <Badge className="absolute top-4 left-4 bg-magware-purple text-white">

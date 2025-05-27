@@ -120,9 +120,10 @@ export default function CartSidebar() {
               {cartItems.map((item: any) => (
                 <div key={item.id} className="flex space-x-4 p-4 border border-gray-200 rounded-lg">
                   <img
-                    src={item.product?.imageUrl || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=100"}
+                    src={item.product?.imageUrl?.replace('@assets/', '/attached_assets/') || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=100"}
                     alt={item.product?.name || "Product"}
                     className="w-16 h-16 object-cover rounded"
+                    loading="lazy"
                   />
                   <div className="flex-1 min-w-0">
                     <h4 className="font-medium text-sm truncate">{item.product?.name}</h4>

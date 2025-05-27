@@ -5,14 +5,14 @@ const categories = [
   {
     name: "Power Tools",
     icon: Drill,
-    href: "/products?category=Power+Tools",
+    href: "/products?category=Power%20Tools",
     gradient: "from-magware-purple to-magware-blue",
     description: "Professional grade power tools"
   },
   {
     name: "Hand Tools", 
     icon: Hammer,
-    href: "/products?category=Hand+Tools",
+    href: "/products?category=Hand%20Tools",
     gradient: "from-magware-blue to-purple-600",
     description: "Quality hand tools & equipment"
   },
@@ -24,23 +24,23 @@ const categories = [
     description: "Complete plumbing solutions"
   },
   {
-    name: "Paints",
+    name: "Paints & Finishes",
     icon: PaintBucket,
-    href: "/products?category=Paints+%26+Finishes",
+    href: "/products?category=Paints%20%26%20Finishes",
     gradient: "from-magware-purple to-magware-blue",
     description: "Premium paints & finishes"
   },
   {
-    name: "Solar",
+    name: "Solar Equipment",
     icon: Zap,
-    href: "/products?category=Solar+Equipment",
+    href: "/products?category=Solar%20Equipment",
     gradient: "from-yellow-500 to-orange-500",
     description: "Solar energy solutions"
   },
   {
-    name: "Materials",
+    name: "Building Materials",
     icon: Building,
-    href: "/products?category=Building+Materials",
+    href: "/products?category=Building%20Materials",
     gradient: "from-gray-600 to-magware-purple",
     description: "Construction materials"
   }
