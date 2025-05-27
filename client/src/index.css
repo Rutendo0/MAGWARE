@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 258 90% 66%; /* MAGWARE Purple */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+
+  /* MAGWARE Brand Colors */
+  --magware-purple: 258 90% 66%; /* #8B5CF6 */
+  --magware-purple-dark: 258 75% 55%; /* #6D28D9 */
+  --magware-blue: 214 95% 60%; /* #3B82F6 */
+  --magware-secondary: 258 94% 71%; /* #A855F7 */
+  --magware-gray: 215 16% 47%; /* #64748B */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 258 90% 66%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .magware-gradient {
+    background: linear-gradient(135deg, hsl(var(--magware-purple)), hsl(var(--magware-blue)));
+  }
+  
+  .magware-gradient-secondary {
+    background: linear-gradient(135deg, hsl(var(--magware-blue)), hsl(var(--magware-secondary)));
+  }
+  
+  .magware-text-gradient {
+    background: linear-gradient(135deg, hsl(var(--magware-purple)), hsl(var(--magware-blue)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .text-magware-purple {
+    color: hsl(var(--magware-purple));
+  }
+  
+  .text-magware-purple-dark {
+    color: hsl(var(--magware-purple-dark));
+  }
+  
+  .text-magware-blue {
+    color: hsl(var(--magware-blue));
+  }
+  
+  .text-magware-secondary {
+    color: hsl(var(--magware-secondary));
+  }
+  
+  .text-magware-gray {
+    color: hsl(var(--magware-gray));
+  }
+  
+  .bg-magware-purple {
+    background-color: hsl(var(--magware-purple));
+  }
+  
+  .bg-magware-purple-dark {
+    background-color: hsl(var(--magware-purple-dark));
+  }
+  
+  .bg-magware-blue {
+    background-color: hsl(var(--magware-blue));
+  }
+  
+  .bg-magware-secondary {
+    background-color: hsl(var(--magware-secondary));
+  }
+  
+  .bg-magware-gray {
+    background-color: hsl(var(--magware-gray));
+  }
+  
+  .border-magware-purple {
+    border-color: hsl(var(--magware-purple));
+  }
+  
+  .border-magware-blue {
+    border-color: hsl(var(--magware-blue));
+  }
+  
+  .hover\:bg-magware-purple-dark:hover {
+    background-color: hsl(var(--magware-purple-dark));
+  }
+  
+  .hover\:text-magware-purple:hover {
+    color: hsl(var(--magware-purple));
+  }
+  
+  .hover\:border-magware-purple:hover {
+    border-color: hsl(var(--magware-purple));
+  }
+}
