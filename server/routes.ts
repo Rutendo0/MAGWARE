@@ -3,8 +3,13 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertBulkOrderSchema, insertCartItemSchema } from "@shared/schema";
 import { z } from "zod";
+import express from "express";
+import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve static files for product images
+  app.use('/attached_assets', express.static(path.join(process.cwd(), 'attached_assets')));
+
   // Product routes
   app.get("/api/products", async (req, res) => {
     try {

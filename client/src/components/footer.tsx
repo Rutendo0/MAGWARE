@@ -7,7 +7,6 @@ const quickLinks = [
   { label: "Building Materials", href: "/products?category=Building Materials" },
   { label: "Solar Equipment", href: "/products?category=Solar Equipment" },
   { label: "Plumbing Supplies", href: "/products?category=Plumbing" },
-  { label: "Bulk Orders", href: "/b2b-portal" },
   { label: "B2B Portal", href: "/b2b-portal" }
 ];
 

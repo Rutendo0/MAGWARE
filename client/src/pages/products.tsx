@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useLocation } from "wouter";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import CartSidebar from "@/components/cart-sidebar";
@@ -10,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useCart } from "@/lib/cart-context";
 import { useToast } from "@/hooks/use-toast";
-import { Search, Heart, ShoppingCart } from "lucide-react";
+import { Search, Heart, ShoppingCart, ArrowLeft } from "lucide-react";
 
 const categories = [
   "All Categories",
@@ -19,14 +20,35 @@ const categories = [
   "Plumbing",
   "Solar Equipment",
   "Hand Tools",
-  "Paints & Finishes"
+  "Paints & Finishes",
+  "Electrical",
+  "Security",
+  "Garden Tools",
+  "Fasteners",
+  "Roofing",
+  "Safety",
+  "Hardware",
+  "HVAC",
+  "Storage",
+  "Welding",
+  "Automotive Tools"
 ];
 
 export default function Products() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
+  const [location, setLocation] = useLocation();
   const { addToCart } = useCart();
   const { toast } = useToast();
+
+  // Handle URL category parameter
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const categoryParam = params.get('category');
+    if (categoryParam) {
+      setSelectedCategory(categoryParam);
+    }
+  }, [location]);
 
   const { data: products = [], isLoading } = useQuery({
     queryKey: ["/api/products"],
@@ -61,6 +83,16 @@ export default function Products() {
       
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
+          <div className="flex items-center mb-4">
+            <Button
+              variant="ghost"
+              onClick={() => setLocation('/')}
+              className="mr-4 text-magware-purple hover:text-magware-purple-dark"
+            >
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Home
+            </Button>
+          </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Our Products</h1>
           <p className="text-xl text-magware-gray">Professional tools and equipment for every project</p>
         </div>
