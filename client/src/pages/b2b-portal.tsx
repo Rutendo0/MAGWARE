@@ -119,28 +119,28 @@ export default function B2BPortal() {
               <Button
                 variant="ghost"
                 onClick={() => setLocation('/')}
-                className="text-white hover:text-yellow-400 hover:bg-white/10 font-semibold text-lg px-6 py-3"
+                className="text-black hover:text-yellow-400 hover:bg-black/10 font-semibold text-lg px-6 py-3"
               >
                 <ArrowLeft className="h-5 w-5 mr-3" />
                 ← Return to Main Store
               </Button>
             </div>
-            <h1 className="text-6xl font-bold mb-8 text-white drop-shadow-2xl">
+            <h1 className="text-6xl font-bold mb-8 text-black drop-shadow-2xl">
               🏢 Professional Business Portal
             </h1>
-            <p className="text-2xl mb-10 text-white font-semibold leading-relaxed drop-shadow-lg max-w-5xl mx-auto">
+            <p className="text-2xl mb-10 text-black font-semibold leading-relaxed drop-shadow-lg max-w-5xl mx-auto">
               Join over 500+ construction companies, contractors, and industrial businesses across Zimbabwe who rely on MAGWARE for their comprehensive bulk hardware procurement solutions
             </p>
             <div className="flex justify-center items-center space-x-8 text-lg font-semibold">
-              <div className="flex items-center bg-white/20 backdrop-blur-sm rounded-xl px-4 py-3">
+              <div className="flex items-center bg-black/20 backdrop-blur-sm rounded-xl px-4 py-3">
                 <CheckCircle className="h-6 w-6 mr-3 text-yellow-400" />
                 <span className="text-white">Up to 25% Volume Discounts</span>
               </div>
-              <div className="flex items-center bg-white/20 backdrop-blur-sm rounded-xl px-4 py-3">
+              <div className="flex items-center bg-black/20 backdrop-blur-sm rounded-xl px-4 py-3">
                 <CheckCircle className="h-6 w-6 mr-3 text-yellow-400" />
                 <span className="text-white">24/7 Dedicated Support</span>
               </div>
-              <div className="flex items-center bg-white/20 backdrop-blur-sm rounded-xl px-4 py-3">
+              <div className="flex items-center bg-black/20 backdrop-blur-sm rounded-xl px-4 py-3">
                 <CheckCircle className="h-6 w-6 mr-3 text-yellow-400" />
                 <span className="text-white">Full API Integration</span>
               </div>

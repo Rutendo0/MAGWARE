@@ -71,10 +71,7 @@ export default function Header() {
                   <div className="w-2 h-2 bg-white rounded-full"></div>
                 </div>
                 {/* Professional badge */}
-                <div className="absolute -bottom-1 -right-1 bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full font-bold shadow-lg">
-                  PRO
-                </div>
-              </div>
+      
               <div className="flex flex-col">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-black bg-gradient-to-r from-red-600 via-orange-600 to-amber-600 bg-clip-text text-transparent tracking-tight leading-none drop-shadow-sm">
                   MAGWARE
@@ -91,7 +88,7 @@ export default function Header() {
                       <div key={i} className="w-1 h-1 bg-orange-400 rounded-full animate-pulse" style={{animationDelay: `${i * 0.2}s`}}></div>
                     ))}
                   </div>
-                  <span className="text-xs text-gray-600 font-semibold ml-2">Trusted Since 2020</span>
+              
                 </div>
               </div>
             </Link>
