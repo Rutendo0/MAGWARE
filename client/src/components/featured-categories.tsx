@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Drill, Hammer, Wrench, PaintBucket, Zap, Building } from "lucide-react";
+import { Drill, Hammer, Wrench, PaintBucket, Zap, Building, ArrowRight } from "lucide-react";
 
 const categories = [
   {
@@ -57,40 +57,45 @@ export default function FeaturedCategories() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {categories.map((category) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {categories.map((category, index) => {
             const IconComponent = category.icon;
             return (
               <Link key={category.name} href={category.href}>
-                <div className="group cursor-pointer">
-                  <div className={`bg-gradient-to-br ${category.gradient} p-6 rounded-2xl text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 relative overflow-hidden border border-white/20 backdrop-blur-sm`}>
-                    {/* Enhanced overlay for better clarity */}
-                    <div className="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
-                    
-                    {/* Clear icon container */}
-                    <div className="bg-white/25 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center relative z-10 group-hover:bg-white/35 transition-all duration-300 shadow-lg border border-white/30">
-                      <IconComponent className="text-white h-8 w-8 drop-shadow-2xl" />
+                <div className="group relative overflow-hidden rounded-3xl shadow-2xl transition-all duration-500 hover:scale-105 hover:shadow-3xl cursor-pointer border-2 border-white/20 hover:border-white/40"
+                     style={{animationDelay: `${index * 0.1}s`}}>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-95`}></div>
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+
+                  {/* Enhanced decorative elements */}
+                  <div className="absolute top-4 right-4 w-20 h-20 bg-white/10 rounded-full blur-xl group-hover:bg-white/20 transition-all duration-500"></div>
+                  <div className="absolute bottom-4 left-4 w-16 h-16 bg-white/5 rounded-full blur-lg"></div>
+
+                  <div className="relative z-10 p-8 text-white h-56 flex flex-col justify-between">
+                    <div>
+                      <div className="bg-white/25 backdrop-blur-sm rounded-2xl p-4 w-fit mb-4 group-hover:bg-white/35 transition-all duration-300 border border-white/30 shadow-xl">
+                        <IconComponent className="h-8 w-8 text-white drop-shadow-2xl" />
+                      </div>
+                      <h4 className="text-2xl font-bold mb-3 drop-shadow-2xl tracking-wide">{category.name}</h4>
+                      <p className="text-white/95 font-semibold drop-shadow-xl text-lg leading-relaxed">{category.description}</p>
                     </div>
-                    
-                    {/* Clear title with better contrast */}
-                    <h4 className="text-white font-bold text-base mb-2 relative z-10 drop-shadow-lg text-shadow-lg">
-                      {category.name}
-                    </h4>
-                    
-                    {/* Clear description with better readability */}
-                    <p className="text-white/90 text-xs mb-3 relative z-10 drop-shadow-md font-medium">
-                      {category.description}
-                    </p>
-                    
-                    {/* Clear call to action */}
-                    <div className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 relative z-10 font-bold drop-shadow-lg">
-                      Shop Now →
+
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-white/95 group-hover:text-white font-bold transition-all duration-300 text-lg">
+                        <span className="mr-3">Explore Collection</span>
+                        <div className="bg-white/25 rounded-full p-2 group-hover:bg-white/40 transition-all duration-300 border border-white/40">
+                          <ArrowRight className="h-5 w-5" />
+                        </div>
+                      </div>
+
+                      {/* Quality badge */}
+                      <div className="bg-yellow-500/90 text-black px-3 py-1 rounded-full text-xs font-bold border border-yellow-400">
+                        QUALITY
+                      </div>
                     </div>
-                    
-                    {/* Subtle decorative element */}
-                    <div className="absolute top-0 right-0 w-16 h-16 bg-white/10 rounded-full transform translate-x-8 -translate-y-8 group-hover:scale-125 transition-transform duration-500"></div>
-                    <div className="absolute bottom-0 left-0 w-12 h-12 bg-white/5 rounded-full transform -translate-x-6 translate-y-6 group-hover:scale-150 transition-transform duration-700"></div>
                   </div>
+
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </Link>
             );

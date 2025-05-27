@@ -60,25 +60,46 @@ export default function Header() {
           <div className="flex items-center justify-between py-3 md:py-4">
             {/* Logo */}
             <Link href="/" className="flex items-center group">
-              <div className="relative mr-3">
-                <div className="bg-gradient-to-br from-purple-600 via-purple-700 to-blue-600 p-3 rounded-2xl shadow-2xl border border-purple-300/30 backdrop-blur-sm transform transition-all duration-300 group-hover:scale-105">
-                  <div className="absolute inset-0 bg-white/10 rounded-2xl"></div>
+              <div className="relative mr-4">
+                {/* Main Logo Container */}
+                <div className="bg-gradient-to-br from-orange-500 via-red-600 to-red-700 p-4 rounded-3xl shadow-2xl border-2 border-white/20 backdrop-blur-sm transform transition-all duration-300 group-hover:scale-105 group-hover:rotate-3">
+                  {/* Inner glow effect */}
+                  <div className="absolute inset-0 bg-white/15 rounded-3xl blur-sm"></div>
+                  {/* Logo content */}
                   <div className="relative z-10 flex items-center justify-center">
-                    <Building2 className="text-white h-7 w-7 md:h-8 md:w-8 drop-shadow-2xl" />
+                    <div className="text-white font-black text-lg md:text-xl tracking-wider">
+                      MW
+                    </div>
                   </div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Highlight effect */}
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full shadow-xl animate-pulse"></div>
+                {/* Quality indicator dot */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full shadow-xl border-2 border-white animate-pulse flex items-center justify-center">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                {/* Professional badge */}
+                <div className="absolute -bottom-1 -right-1 bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full font-bold shadow-lg">
+                  PRO
+                </div>
               </div>
               <div className="flex flex-col">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-black bg-gradient-to-r from-purple-600 via-purple-700 to-blue-600 bg-clip-text text-transparent tracking-tight leading-none">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-black bg-gradient-to-r from-red-600 via-orange-600 to-amber-600 bg-clip-text text-transparent tracking-tight leading-none drop-shadow-sm">
                   MAGWARE
                 </h1>
                 <div className="flex items-center space-x-2 mt-1">
-                  <div className="h-0.5 w-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"></div>
-                  <p className="text-xs md:text-sm text-gray-700 font-bold tracking-wider uppercase">
-                    Hardware & Building Supplies
+                  <div className="h-1 w-12 bg-gradient-to-r from-red-600 to-orange-600 rounded-full shadow-sm"></div>
+                  <p className="text-xs md:text-sm text-gray-800 font-bold tracking-wider uppercase bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
+                    Professional Hardware Solutions
                   </p>
+                </div>
+                <div className="flex items-center space-x-1 mt-0.5">
+                  <div className="flex space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <div key={i} className="w-1 h-1 bg-orange-400 rounded-full animate-pulse" style={{animationDelay: `${i * 0.2}s`}}></div>
+                    ))}
+                  </div>
+                  <span className="text-xs text-gray-600 font-semibold ml-2">Trusted Since 2020</span>
                 </div>
               </div>
             </Link>

@@ -21,7 +21,7 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-gradient-to-br from-gray-900 via-slate-900 to-black text-white py-16 border-t-4 border-orange-500">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -104,28 +104,35 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h5 className="text-lg font-semibold mb-6">Contact Us</h5>
-            <div className="space-y-4">
+          <div className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700">
+            <h5 className="text-xl font-bold mb-6 text-orange-400">📞 Contact Us</h5>
+            <div className="space-y-5">
               <div className="flex items-start">
-                <MapPin className="text-magware-purple mt-1 mr-3 h-5 w-5 flex-shrink-0" />
+                <MapPin className="text-orange-400 mt-1 mr-4 h-6 w-6 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-400">Shop 4, Avonlea Shopping Center</p>
-                  <p className="text-gray-400">Greencroft Shops, Next to OK Supermarket</p>
+                  <p className="text-white font-semibold text-lg">Shop 4, Avonlea Shopping Center</p>
+                  <p className="text-gray-300 font-medium">Greencroft Shops, Next to OK Supermarket</p>
+                  <p className="text-orange-300 text-sm mt-1">🚗 Easy parking available</p>
                 </div>
               </div>
-              <div className="flex items-center">
-                <Phone className="text-magware-purple mr-3 h-5 w-5 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-400">0779 656 666</p>
-                  <p className="text-gray-400">0776 612 600</p>
+              <div className="bg-green-600/20 rounded-lg p-4 border border-green-500/30">
+                <div className="flex items-center mb-2">
+                  <Phone className="text-green-400 mr-3 h-6 w-6 flex-shrink-0" />
+                  <h6 className="text-white font-bold">Call Now for Quotes</h6>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-green-200 font-bold text-lg">📱 0779 656 666</p>
+                  <p className="text-green-200 font-bold text-lg">📱 0776 612 600</p>
+                  <p className="text-green-300 text-sm">💬 WhatsApp available</p>
                 </div>
               </div>
-              <div className="flex items-center">
-                <Clock className="text-magware-purple mr-3 h-5 w-5 flex-shrink-0" />
+              <div className="flex items-start">
+                <Clock className="text-blue-400 mr-4 h-6 w-6 flex-shrink-0 mt-1" />
                 <div>
-                  <p className="text-gray-400">Mon - Sat: 8:00 AM - 6:00 PM</p>
-                  <p className="text-gray-400">Sunday: Closed</p>
+                  <h6 className="text-white font-bold mb-2">Store Hours</h6>
+                  <p className="text-blue-200 font-semibold">Mon - Sat: 8:00 AM - 6:00 PM</p>
+                  <p className="text-red-300 font-semibold">Sunday: Closed</p>
+                  <p className="text-yellow-300 text-sm mt-1">⚡ Same-day delivery available</p>
                 </div>
               </div>
             </div>
