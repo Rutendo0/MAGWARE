@@ -52,13 +52,13 @@ export default function HeroSection() {
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-                alt="Professional construction worker using power tools"
+                src="/attached_assets/IMG-20250419-WA0021.jpg"
+                alt="MAGWARE Professional Tools & Equipment"
                 className="rounded-xl shadow-2xl w-full h-auto"
               />
               <div className="absolute -bottom-4 -right-4 bg-yellow-500 text-black p-4 rounded-lg shadow-lg">
-                <div className="font-bold text-lg">Cash Back</div>
-                <div className="text-sm">On Every Purchase</div>
+                <div className="font-bold text-lg">Best Prices</div>
+                <div className="text-sm">In Zimbabwe</div>
               </div>
             </div>
           </div>
