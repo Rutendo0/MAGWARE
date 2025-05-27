@@ -22,10 +22,10 @@ export default function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/products", label: "Products" },
-    { href: "/products?category=Power%20Tools", label: "Power Tools" },
-    { href: "/products?category=Building%20Materials", label: "Building Materials" },
+    { href: "/products?category=Power Tools", label: "Power Tools" },
+    { href: "/products?category=Building Materials", label: "Building Materials" },
     { href: "/products?category=Plumbing", label: "Plumbing" },
-    { href: "/products?category=Solar%20Equipment", label: "Solar Equipment" },
+    { href: "/products?category=Solar Equipment", label: "Solar Equipment" },
     { href: "/b2b-portal", label: "B2B Portal" },
   ];
 
@@ -64,23 +64,23 @@ export default function Header() {
           <div className="flex items-center justify-between py-3 md:py-4">
             {/* Logo */}
             <Link href="/" className="flex items-center group">
-              <div className="relative mr-4">
-                <div className="bg-gradient-to-br from-magware-purple via-blue-600 to-magware-blue p-3 rounded-2xl shadow-xl border border-white/20 backdrop-blur-sm transform transition-all duration-300 group-hover:scale-105">
-                  <div className="absolute inset-0 bg-white/5 rounded-2xl"></div>
+              <div className="relative mr-3">
+                <div className="bg-gradient-to-br from-purple-600 via-purple-700 to-blue-600 p-3 rounded-2xl shadow-2xl border border-purple-300/30 backdrop-blur-sm transform transition-all duration-300 group-hover:scale-105">
+                  <div className="absolute inset-0 bg-white/10 rounded-2xl"></div>
                   <div className="relative z-10 flex items-center justify-center">
-                    <Building2 className="text-white h-8 w-8 drop-shadow-2xl" />
+                    <Building2 className="text-white h-7 w-7 md:h-8 md:w-8 drop-shadow-2xl" />
                   </div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full shadow-lg"></div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full shadow-xl animate-pulse"></div>
               </div>
               <div className="flex flex-col">
-                <h1 className="text-2xl md:text-3xl font-black bg-gradient-to-r from-magware-purple via-blue-700 to-magware-blue bg-clip-text text-transparent tracking-tight">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-black bg-gradient-to-r from-purple-600 via-purple-700 to-blue-600 bg-clip-text text-transparent tracking-tight leading-none">
                   MAGWARE
                 </h1>
-                <div className="flex items-center space-x-2">
-                  <div className="h-0.5 w-6 bg-gradient-to-r from-magware-purple to-blue-600"></div>
-                  <p className="text-xs md:text-sm text-gray-600 font-semibold tracking-wider uppercase">
+                <div className="flex items-center space-x-2 mt-1">
+                  <div className="h-0.5 w-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"></div>
+                  <p className="text-xs md:text-sm text-gray-700 font-bold tracking-wider uppercase">
                     Professional Hardware
                   </p>
                 </div>
@@ -101,7 +101,7 @@ export default function Header() {
                   <Button
                     type="submit"
                     size="sm"
-                    className="absolute right-1 top-1 h-[calc(100%-8px)] px-4 rounded-lg bg-gradient-to-r from-magware-purple to-blue-600 hover:from-magware-purple-dark hover:to-blue-700 shadow-lg transition-all duration-200"
+                    className="absolute right-1 top-1 h-[calc(100%-8px)] px-4 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg transition-all duration-200"
                   >
                     <Search className="h-4 w-4" />
                   </Button>
@@ -112,21 +112,21 @@ export default function Header() {
             {/* Action Buttons */}
             <div className="flex items-center space-x-3">
               <Link href="/b2b-portal">
-                <Button variant="ghost" className="hidden lg:flex items-center text-gray-700 hover:text-magware-purple hover:bg-purple-50 transition-all duration-200 rounded-lg px-4 py-2">
+                <Button variant="ghost" className="hidden lg:flex items-center text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-200 rounded-lg px-4 py-2">
                   <Building2 className="h-4 w-4 mr-2" />
-                  <span className="font-medium">B2B Portal</span>
+                  <span className="font-semibold">B2B Portal</span>
                 </Button>
               </Link>
               
               <Button 
                 variant="ghost" 
                 onClick={() => setIsCartOpen(true)}
-                className="flex items-center text-gray-700 hover:text-magware-purple hover:bg-purple-50 relative transition-all duration-200 rounded-lg px-4 py-2"
+                className="flex items-center text-gray-700 hover:text-purple-600 hover:bg-purple-50 relative transition-all duration-200 rounded-lg px-4 py-2"
               >
                 <ShoppingCart className="h-5 w-5 mr-2" />
-                <span className="hidden md:inline font-medium">Cart</span>
+                <span className="hidden md:inline font-semibold">Cart</span>
                 {cartCount > 0 && (
-                  <span className="bg-gradient-to-r from-magware-purple to-blue-600 text-white rounded-full px-2.5 py-1 text-xs ml-2 min-w-[22px] text-center font-semibold shadow-lg animate-pulse">
+                  <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-2.5 py-1 text-xs ml-2 min-w-[22px] text-center font-bold shadow-xl animate-pulse">
                     {cartCount}
                   </span>
                 )}
@@ -153,8 +153,8 @@ export default function Header() {
                       variant="ghost"
                       className={`font-semibold transition-all duration-200 rounded-lg px-4 py-2 relative ${
                         location === link.href
-                          ? "text-magware-purple bg-purple-50 shadow-sm"
-                          : "text-gray-700 hover:text-magware-purple hover:bg-white/80"
+                          ? "text-purple-600 bg-purple-50 shadow-sm"
+                          : "text-gray-700 hover:text-purple-600 hover:bg-white/80"
                       }`}
                     >
                       {link.label}
@@ -199,10 +199,10 @@ export default function Header() {
                   <Link key={link.href} href={link.href}>
                     <Button
                       variant="ghost"
-                      className={`w-full justify-start ${
+                      className={`w-full justify-start font-medium ${
                         location === link.href
-                          ? "text-magware-purple bg-purple-50"
-                          : "text-magware-gray"
+                          ? "text-purple-600 bg-purple-50"
+                          : "text-gray-700 hover:text-purple-600 hover:bg-purple-50"
                       }`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
