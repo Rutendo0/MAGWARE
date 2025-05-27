@@ -116,9 +116,15 @@ export default function HeroSection() {
             
             {/* WhatsApp Quick Contact */}
             <div className="mt-6 pt-6 border-t border-white/20">
-              <Button className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-xl transform transition-all duration-300 hover:scale-105">
-                💬 WhatsApp Us for Instant Quotes
-              </Button>
+              <a 
+                href="https://wa.me/263779656666?text=Hi%20MAGWARE%2C%20I%20need%20an%20instant%20quote%20for%20hardware%20items.%20Please%20help%20me%20with%20pricing%20and%20availability."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-xl transform transition-all duration-300 hover:scale-105">
+                  💬 WhatsApp Us for Instant Quotes
+                </Button>
+              </a>
             </div>
           </div>
         </div>

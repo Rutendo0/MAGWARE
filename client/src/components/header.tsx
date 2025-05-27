@@ -61,19 +61,11 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center group">
               <div className="relative mr-4">
-                {/* Main Logo Container */}
-                <div className="bg-gradient-to-br from-orange-500 via-red-600 to-red-700 p-4 rounded-3xl shadow-2xl border-2 border-white/20 backdrop-blur-sm transform transition-all duration-300 group-hover:scale-105 group-hover:rotate-3">
-                  {/* Inner glow effect */}
-                  <div className="absolute inset-0 bg-white/15 rounded-3xl blur-sm"></div>
-                  {/* Logo content */}
-                  <div className="relative z-10 flex items-center justify-center">
-                    <div className="text-white font-black text-lg md:text-xl tracking-wider">
-                      MW
-                    </div>
-                  </div>
-                  {/* Highlight effect */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+                <img 
+                  src="/attached_assets/magware-logo.png" 
+                  alt="MAGWARE Logo" 
+                  className="w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl border-2 border-white/20 transform transition-all duration-300 group-hover:scale-105"
+                />
                 {/* Quality indicator dot */}
                 <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full shadow-xl border-2 border-white animate-pulse flex items-center justify-center">
                   <div className="w-2 h-2 bg-white rounded-full"></div>
