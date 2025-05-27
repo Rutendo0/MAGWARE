@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useCart } from "@/lib/cart-context";
+import { useWishlist } from "@/lib/wishlist-context";
 import { useToast } from "@/hooks/use-toast";
 import { ShoppingCart, Heart } from "lucide-react";
 
@@ -13,6 +14,7 @@ export default function FeaturedProducts() {
   });
 
   const { addToCart } = useCart();
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const { toast } = useToast();
 
   const handleAddToCart = async (productId: number, productName: string) => {
@@ -27,6 +29,22 @@ export default function FeaturedProducts() {
         title: "Error",
         description: "Failed to add item to cart. Please try again.",
         variant: "destructive",
+      });
+    }
+  };
+
+  const handleWishlistToggle = (product: any) => {
+    if (isInWishlist(product.id)) {
+      removeFromWishlist(product.id);
+    } else {
+      addToWishlist({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        imageUrl: product.imageUrl,
+        description: product.description,
+        category: product.category,
+        inStock: product.inStock
       });
     }
   };
@@ -104,9 +122,14 @@ export default function FeaturedProducts() {
                     <Button
                       variant="outline"
                       size="icon"
-                      className="border-magware-purple text-magware-purple hover:bg-magware-purple hover:text-white"
-                    >
-                      <Heart className="h-4 w-4" />
+                      onClick={() => handleWishlistToggle(product)}
+                      className={`border-magware-purple transition-colors ${
+                        isInWishlist(product.id)
+                          ? "bg-red-500 text-white hover:bg-red-600"
+                          : "text-magware-purple hover:bg-magware-purple hover:text-white"
+                      }`}
+                      >
+                      <Heart className={`h-4 w-4 ${isInWishlist(product.id) ? "fill-current" : ""}`} />
                     </Button>
                   </div>
                 </CardContent>

@@ -3,7 +3,8 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useCart } from "@/lib/cart-context";
-import { Search, ShoppingCart, Building2, Menu, X, Phone, MapPin } from "lucide-react";
+import { useWishlist } from "@/lib/wishlist-context";
+import { Search, ShoppingCart, Building2, Menu, X, Phone, MapPin, Heart } from "lucide-react";
 import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 
 export default function Header() {
@@ -11,6 +12,7 @@ export default function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [location, navigate] = useLocation();
   const { cartCount, setIsCartOpen } = useCart();
+  const { wishlistCount } = useWishlist();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -88,7 +90,7 @@ export default function Header() {
                       <div key={i} className="w-1 h-1 bg-orange-400 rounded-full animate-pulse" style={{animationDelay: `${i * 0.2}s`}}></div>
                     ))}
                   </div>
-              
+
                 </div>
               </div>
             </Link>
@@ -121,6 +123,21 @@ export default function Header() {
                 <Button variant="ghost" className="hidden lg:flex items-center text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-200 rounded-lg px-4 py-2">
                   <Building2 className="h-4 w-4 mr-2" />
                   <span className="font-semibold">B2B Portal</span>
+                </Button>
+              </Link>
+
+              <Link href="/wishlist">
+                <Button
+                  variant="ghost"
+                  className="flex items-center text-gray-700 hover:text-purple-600 hover:bg-purple-50 relative transition-all duration-200 rounded-lg px-4 py-2"
+                >
+                  <Heart className="h-5 w-5 mr-2" />
+                  <span className="hidden md:inline font-semibold">Wishlist</span>
+                  {wishlistCount > 0 && (
+                    <span className="bg-red-500 text-white rounded-full px-2.5 py-1 text-xs ml-2 min-w-[22px] text-center font-bold shadow-xl animate-pulse">
+                      {wishlistCount}
+                    </span>
+                  )}
                 </Button>
               </Link>
 
@@ -239,6 +256,18 @@ export default function Header() {
                     </Button>
                   </Link>
                 ))}
+                <Link href="/wishlist">
+                  <Button
+                    variant="ghost"
+                    className={`w-full justify-start font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50`}
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    <Heart className="h-4 w-4 mr-2" />
+                    Wishlist ({wishlistCount})
+                  </Button>
+                </Link>
                 <a 
                   href="https://wa.me/263779656666?text=Hi%20MAGWARE%2C%20I%20need%20an%20instant%20quote%20for%20hardware%20items.%20Please%20help%20me%20with%20pricing."
                   target="_blank"
