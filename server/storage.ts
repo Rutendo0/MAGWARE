@@ -75,7 +75,7 @@ export class MemStorage implements IStorage {
         price: "45.00",
         category: "Electrical",
         brand: "MAGWARE",
-        imageUrl: "@assets/IMG-20250419-WA0009.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0021.jpg",
         inStock: true,
         featured: true,
         specifications: "LED technology, multiple designs available, energy efficient"
@@ -363,7 +363,16 @@ export class MemStorage implements IStorage {
 
   async createProduct(insertProduct: InsertProduct): Promise<Product> {
     const id = this.currentProductId++;
-    const product: Product = { ...insertProduct, id };
+    const product: Product = { 
+      ...insertProduct, 
+      id,
+      brand: insertProduct.brand || null,
+      originalPrice: insertProduct.originalPrice || null,
+      imageUrl: insertProduct.imageUrl || null,
+      inStock: insertProduct.inStock || null,
+      featured: insertProduct.featured || null,
+      specifications: insertProduct.specifications || null
+    };
     this.products.set(id, product);
     return product;
   }
@@ -378,7 +387,14 @@ export class MemStorage implements IStorage {
 
   async createSolarPackage(insertPackage: InsertSolarPackage): Promise<SolarPackage> {
     const id = this.currentSolarPackageId++;
-    const solarPackage: SolarPackage = { ...insertPackage, id };
+    const solarPackage: SolarPackage = { 
+      ...insertPackage, 
+      id,
+      components: insertPackage.components || null,
+      powerOutput: insertPackage.powerOutput || null,
+      suitable: insertPackage.suitable || null,
+      popular: insertPackage.popular || null
+    };
     this.solarPackages.set(id, solarPackage);
     return solarPackage;
   }
@@ -386,7 +402,9 @@ export class MemStorage implements IStorage {
   async createBulkOrder(insertOrder: InsertBulkOrder): Promise<BulkOrder> {
     const id = this.currentBulkOrderId++;
     const order: BulkOrder = { 
-      ...insertOrder, 
+      ...insertOrder,
+      companyId: insertOrder.companyId || null,
+      notes: insertOrder.notes || null,
       id, 
       status: "pending",
       createdAt: new Date()
