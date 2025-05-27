@@ -75,7 +75,7 @@ export class MemStorage implements IStorage {
         price: "45.00",
         category: "Electrical",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/IMG-20250419-WA0021.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0009.jpg",
         inStock: true,
         featured: true,
         specifications: "LED technology, multiple designs available, energy efficient"
@@ -88,7 +88,7 @@ export class MemStorage implements IStorage {
         price: "18.50",
         category: "Paints & Finishes",
         brand: "Splash",
-        imageUrl: "/attached_assets/IMG-20250419-WA0022.jpg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.16 (1).jpeg",
         inStock: true,
         featured: true,
         specifications: "Weather resistant, glossy finish, suitable for all wood types"
