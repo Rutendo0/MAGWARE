@@ -67,36 +67,36 @@ export default function B2BSection() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-4xl font-bold mb-6">Bulk Orders for Construction Companies</h3>
-            <p className="text-xl mb-8 text-purple-100">
-              Special pricing and procurement solutions for large construction companies like Masimba. 
-              Connect your procurement system directly to your MAGWARE account for streamlined ordering.
+            <h3 className="text-5xl font-bold mb-8 text-white drop-shadow-2xl">Business Solutions for Construction Companies</h3>
+            <p className="text-2xl mb-10 text-white font-medium leading-relaxed drop-shadow-lg">
+              Get exclusive wholesale pricing and automated procurement for construction companies. 
+              Seamlessly integrate with your existing systems like SAP, QuickBooks, and Coupa for effortless ordering.
             </p>
             
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center">
-                <CheckCircle className="text-yellow-400 mr-4 h-5 w-5 flex-shrink-0" />
-                <span className="text-lg">Volume discounts up to 25%</span>
+            <div className="space-y-6 mb-10">
+              <div className="flex items-center bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                <CheckCircle className="text-yellow-400 mr-5 h-7 w-7 flex-shrink-0" />
+                <span className="text-xl font-semibold text-white">Volume discounts up to 25% off</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="text-yellow-400 mr-4 h-5 w-5 flex-shrink-0" />
-                <span className="text-lg">SAP, QuickBooks & Coupa integration</span>
+              <div className="flex items-center bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                <CheckCircle className="text-yellow-400 mr-5 h-7 w-7 flex-shrink-0" />
+                <span className="text-xl font-semibold text-white">SAP, QuickBooks & Coupa integration</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="text-yellow-400 mr-4 h-5 w-5 flex-shrink-0" />
-                <span className="text-lg">PunchOut catalog support</span>
+              <div className="flex items-center bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                <CheckCircle className="text-yellow-400 mr-5 h-7 w-7 flex-shrink-0" />
+                <span className="text-xl font-semibold text-white">PunchOut catalog support</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="text-yellow-400 mr-4 h-5 w-5 flex-shrink-0" />
-                <span className="text-lg">Email-to-order automation</span>
+              <div className="flex items-center bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                <CheckCircle className="text-yellow-400 mr-5 h-7 w-7 flex-shrink-0" />
+                <span className="text-xl font-semibold text-white">Email-to-order automation</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="text-yellow-400 mr-4 h-5 w-5 flex-shrink-0" />
-                <span className="text-lg">Same-day delivery for bulk orders</span>
+              <div className="flex items-center bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                <CheckCircle className="text-yellow-400 mr-5 h-7 w-7 flex-shrink-0" />
+                <span className="text-xl font-semibold text-white">Same-day delivery for bulk orders</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="text-yellow-400 mr-4 h-5 w-5 flex-shrink-0" />
-                <span className="text-lg">30-day credit terms available</span>
+              <div className="flex items-center bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                <CheckCircle className="text-yellow-400 mr-5 h-7 w-7 flex-shrink-0" />
+                <span className="text-xl font-semibold text-white">30-day credit terms available</span>
               </div>
             </div>
 

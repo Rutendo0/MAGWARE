@@ -139,12 +139,27 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400">&copy; 2024 MAGWARE Hardware Store. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <span className="text-gray-400 hover:text-magware-purple transition-colors cursor-pointer">Privacy Policy</span>
-            <span className="text-gray-400 hover:text-magware-purple transition-colors cursor-pointer">Terms & Conditions</span>
-            <span className="text-gray-400 hover:text-magware-purple transition-colors cursor-pointer">Shipping Policy</span>
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-4">
+            <p className="text-gray-400">&copy; 2024 MAGWARE Hardware Store. All rights reserved.</p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <span className="text-gray-400 hover:text-magware-purple transition-colors cursor-pointer">Privacy Policy</span>
+              <span className="text-gray-400 hover:text-magware-purple transition-colors cursor-pointer">Terms & Conditions</span>
+              <span className="text-gray-400 hover:text-magware-purple transition-colors cursor-pointer">Shipping Policy</span>
+            </div>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-500 text-sm">
+              Designed by{" "}
+              <a 
+                href="https://www.niakazi.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-magware-purple hover:text-yellow-400 transition-colors font-semibold"
+              >
+                Niakazi
+              </a>
+            </p>
           </div>
         </div>
       </div>

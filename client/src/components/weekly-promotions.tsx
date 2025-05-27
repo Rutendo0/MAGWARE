@@ -40,18 +40,18 @@ export default function WeeklyPromotions() {
     <section className="py-16 magware-gradient text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold mb-4">This Week's Promotions</h3>
-          <p className="text-xl text-purple-100">Limited time offers on essential tools and materials</p>
+          <h3 className="text-4xl font-bold mb-6 text-white drop-shadow-2xl">This Week's Hot Deals</h3>
+          <p className="text-2xl text-white font-semibold drop-shadow-lg">Massive savings on professional tools and building materials</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {promotions.map((promo, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-              <Badge className={`${promo.discountColor} rounded-full px-4 py-2 inline-block mb-4 font-bold`}>
+            <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-8 text-center shadow-2xl border border-white/30">
+              <Badge className={`${promo.discountColor} rounded-full px-6 py-3 inline-block mb-6 font-bold text-lg`}>
                 {promo.discount}
               </Badge>
-              <h4 className="text-xl font-bold mb-2">{promo.title}</h4>
-              <p className="text-purple-100 mb-4">{promo.description}</p>
+              <h4 className="text-2xl font-bold mb-4 text-white drop-shadow-lg">{promo.title}</h4>
+              <p className="text-white text-lg mb-6 font-medium drop-shadow-md">{promo.description}</p>
               <Button
                 onClick={() => handlePromotionClick(promo.title)}
                 className="bg-white text-magware-purple hover:bg-gray-100 font-semibold"

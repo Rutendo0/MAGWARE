@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useCart } from "@/lib/cart-context";
 import { Search, ShoppingCart, Building2, Menu, X, Phone, MapPin } from "lucide-react";
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -134,7 +134,7 @@ export default function Header() {
                   <span className="font-semibold">B2B Portal</span>
                 </Button>
               </Link>
-              
+
               <Button 
                 variant="ghost" 
                 onClick={() => setIsCartOpen(true)}
@@ -148,7 +148,20 @@ export default function Header() {
                   </span>
                 )}
               </Button>
-              
+
+              <a 
+                href="https://wa.me/263779656666?text=Hi%20MAGWARE%2C%20I%20need%20an%20instant%20quote%20for%20hardware%20items.%20Please%20help%20me%20with%20pricing."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button 
+                  className="hidden md:flex bg-green-600 hover:bg-green-700 text-white font-semibold"
+                >
+                  <FaWhatsapp className="h-4 w-4 mr-2" />
+                  WhatsApp Us
+                </Button>
+              </a>
+
               <Button
                 variant="ghost"
                 size="icon"
@@ -237,6 +250,16 @@ export default function Header() {
                     </Button>
                   </Link>
                 ))}
+                <a 
+                  href="https://wa.me/263779656666?text=Hi%20MAGWARE%2C%20I%20need%20an%20instant%20quote%20for%20hardware%20items.%20Please%20help%20me%20with%20pricing."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="w-full justify-start bg-green-600 hover:bg-green-700 text-white">
+                    <FaWhatsapp className="h-4 w-4 mr-2" />
+                    WhatsApp Us
+                  </Button>
+                </a>
               </nav>
             </div>
           </div>

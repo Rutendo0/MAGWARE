@@ -125,9 +125,9 @@ export default function B2BPortal() {
                 Back to Home
               </Button>
             </div>
-            <h1 className="text-5xl font-bold mb-6">B2B Portal</h1>
-            <p className="text-xl mb-8 text-purple-100">
-              Join hundreds of construction companies and contractors who trust MAGWARE for their bulk hardware needs
+            <h1 className="text-6xl font-bold mb-8 text-white drop-shadow-2xl">Business Portal</h1>
+            <p className="text-2xl mb-10 text-white font-semibold leading-relaxed drop-shadow-lg max-w-4xl mx-auto">
+              Join hundreds of construction companies and contractors across Zimbabwe who trust MAGWARE for their bulk hardware procurement needs
             </p>
             <div className="flex justify-center items-center space-x-8 text-sm">
               <div className="flex items-center">
