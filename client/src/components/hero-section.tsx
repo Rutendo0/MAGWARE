@@ -1,73 +1,72 @@
-import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { CheckCircle } from "lucide-react";
 
-import { Link } from "wouter";
+import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function HeroSection() {
   return (
-    <section className="professional-gradient text-white py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-black/10"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-white/10"></div>
-      <div className="container mx-auto px-4 lg:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-4xl lg:text-6xl font-black mb-6 leading-tight">
-                Professional Tools & Equipment for Every Project
-              </h2>
-              <p className="text-lg lg:text-xl mb-8 text-blue-100 leading-relaxed max-w-lg">
-                From power tools to building materials, we supply everything construction professionals need. 
-                Special bulk pricing for contractors and large projects.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Link href="/products">
-                <Button 
-                  size="lg"
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black hover:from-yellow-500 hover:to-orange-600 font-bold px-10 py-4 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-200"
-                >
-                  Browse Products
-                </Button>
-              </Link>
-              <Link href="/b2b-portal">
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  className="border-2 border-white/80 text-white hover:bg-white hover:text-purple-900 font-bold px-10 py-4 rounded-xl backdrop-blur-sm bg-white/10 shadow-xl transform hover:scale-105 transition-all duration-200"
-                >
-                  Request Bulk Quote
-                </Button>
-              </Link>
-            </div>
-            <div className="grid grid-cols-3 gap-6 max-w-md">
-              <div className="text-center glass-effect rounded-lg p-4">
-                <div className="text-3xl font-black text-yellow-400">500+</div>
-                <div className="text-blue-200 font-semibold text-sm">Products</div>
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-magware-purple via-blue-900 to-magware-blue overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center text-white">
+          {/* Main Heading */}
+          <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
+            Professional
+            <span className="block bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+              Hardware Solutions
+            </span>
+          </h1>
+          
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl mb-12 text-gray-200 max-w-4xl mx-auto leading-relaxed">
+            Your trusted partner for quality tools, materials, and professional equipment. 
+            From power tools to solar solutions - we've got everything you need to build success.
+          </p>
+          
+          {/* Features List */}
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
+            {[
+              "Professional Grade Tools",
+              "Competitive Pricing",
+              "Expert Guidance",
+              "B2B Solutions"
+            ].map((feature, index) => (
+              <div key={index} className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
+                <CheckCircle className="h-5 w-5 mr-3 text-green-400" />
+                <span className="font-semibold">{feature}</span>
               </div>
-              <div className="text-center glass-effect rounded-lg p-4">
-                <div className="text-3xl font-black text-yellow-400">50+</div>
-                <div className="text-blue-200 font-semibold text-sm">Contractors</div>
-              </div>
-              <div className="text-center glass-effect rounded-lg p-4">
-                <div className="text-3xl font-black text-yellow-400">24/7</div>
-                <div className="text-blue-200 font-semibold text-sm">Support</div>
-              </div>
-            </div>
+            ))}
           </div>
-          <div className="relative lg:justify-self-end">
-            <div className="glass-effect rounded-3xl p-6 lg:p-8 transform hover:scale-105 transition-all duration-300">
-              <img
-                src="/attached_assets/IMG-20250419-WA0021.jpg"
-                alt="MAGWARE Professional Tools & Equipment"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-yellow-400 to-orange-500 text-black p-6 rounded-2xl shadow-2xl transform hover:scale-110 transition-all duration-200">
-                <div className="font-black text-xl">Best Prices</div>
-                <div className="text-sm font-semibold opacity-80">In Zimbabwe</div>
-              </div>
-            </div>
+          
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Link href="/products">
+              <Button size="lg" className="bg-white text-magware-purple hover:bg-gray-100 font-bold px-8 py-4 rounded-xl text-lg shadow-2xl transform transition-all duration-300 hover:scale-105">
+                Shop Now
+              </Button>
+            </Link>
+            
+            <Link href="/b2b-portal">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-white text-white hover:bg-white hover:text-magware-purple font-bold px-8 py-4 rounded-xl text-lg backdrop-blur-sm bg-white/10 transform transition-all duration-300 hover:scale-105"
+              >
+                B2B Portal
+              </Button>
+            </Link>
+          </div>
+          
+          {/* Contact Info */}
+          <div className="mt-16 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4">Visit Our Store</h3>
+            <p className="text-gray-200 mb-2">📍 Shop 4, Avonlea Shopping Center</p>
+            <p className="text-gray-200 mb-2">📞 0779 656 666 | 0776 612 600</p>
+            <p className="text-gray-200">🕒 Monday - Saturday: 8:00 AM - 6:00 PM</p>
           </div>
         </div>
       </div>
