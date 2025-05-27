@@ -22,10 +22,6 @@ export default function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/products", label: "Products" },
-    { href: "/products?category=Power%20Tools", label: "Power Tools" },
-    { href: "/products?category=Building%20Materials", label: "Building Materials" },
-    { href: "/products?category=Plumbing", label: "Plumbing" },
-    { href: "/products?category=Solar%20Equipment", label: "Solar Equipment" },
     { href: "/b2b-portal", label: "B2B Portal" },
   ];
 
