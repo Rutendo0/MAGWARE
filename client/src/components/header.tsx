@@ -22,10 +22,10 @@ export default function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/products", label: "Products" },
-    { href: "/products?category=Power Tools", label: "Power Tools" },
-    { href: "/products?category=Building Materials", label: "Building Materials" },
+    { href: "/products?category=Power%20Tools", label: "Power Tools" },
+    { href: "/products?category=Building%20Materials", label: "Building Materials" },
     { href: "/products?category=Plumbing", label: "Plumbing" },
-    { href: "/products?category=Solar Equipment", label: "Solar Equipment" },
+    { href: "/products?category=Solar%20Equipment", label: "Solar Equipment" },
     { href: "/b2b-portal", label: "B2B Portal" },
   ];
 
@@ -152,13 +152,18 @@ export default function Header() {
                     <Button
                       variant="ghost"
                       className={`font-semibold transition-all duration-200 rounded-lg px-4 py-2 relative ${
-                        location === link.href
+                        location === link.href || location.includes(link.href)
                           ? "text-purple-600 bg-purple-50 shadow-sm"
                           : "text-gray-700 hover:text-purple-600 hover:bg-white/80"
                       }`}
+                      onClick={() => {
+                        if (link.href.includes('category=')) {
+                          navigate(link.href);
+                        }
+                      }}
                     >
                       {link.label}
-                      {location === link.href && (
+                      {(location === link.href || location.includes(link.href)) && (
                         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-gradient-to-r from-magware-purple to-blue-600 rounded-full"></div>
                       )}
                     </Button>
@@ -200,11 +205,16 @@ export default function Header() {
                     <Button
                       variant="ghost"
                       className={`w-full justify-start font-medium ${
-                        location === link.href
+                        location === link.href || location.includes(link.href)
                           ? "text-purple-600 bg-purple-50"
                           : "text-gray-700 hover:text-purple-600 hover:bg-purple-50"
                       }`}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        if (link.href.includes('category=')) {
+                          navigate(link.href);
+                        }
+                      }}
                     >
                       {link.label}
                     </Button>

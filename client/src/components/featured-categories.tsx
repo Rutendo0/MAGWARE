@@ -6,42 +6,42 @@ const categories = [
     name: "Power Tools",
     icon: Drill,
     href: "/products?category=Power%20Tools",
-    gradient: "from-magware-purple to-magware-blue",
+    gradient: "from-red-500 via-red-600 to-red-700",
     description: "Professional grade power tools"
   },
   {
     name: "Hand Tools", 
     icon: Hammer,
     href: "/products?category=Hand%20Tools",
-    gradient: "from-magware-blue to-purple-600",
+    gradient: "from-green-500 via-green-600 to-emerald-600",
     description: "Quality hand tools & equipment"
   },
   {
     name: "Plumbing",
     icon: Wrench,
     href: "/products?category=Plumbing", 
-    gradient: "from-blue-600 to-magware-purple",
+    gradient: "from-blue-500 via-blue-600 to-indigo-600",
     description: "Complete plumbing solutions"
   },
   {
     name: "Paints & Finishes",
     icon: PaintBucket,
     href: "/products?category=Paints%20%26%20Finishes",
-    gradient: "from-magware-purple to-magware-blue",
+    gradient: "from-purple-500 via-pink-500 to-rose-500",
     description: "Premium paints & finishes"
   },
   {
     name: "Solar Equipment",
     icon: Zap,
     href: "/products?category=Solar%20Equipment",
-    gradient: "from-yellow-500 to-orange-500",
+    gradient: "from-yellow-500 via-orange-500 to-amber-600",
     description: "Solar energy solutions"
   },
   {
     name: "Building Materials",
     icon: Building,
     href: "/products?category=Building%20Materials",
-    gradient: "from-gray-600 to-magware-purple",
+    gradient: "from-slate-600 via-slate-700 to-gray-800",
     description: "Construction materials"
   }
 ];
