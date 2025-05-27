@@ -1,3 +1,4 @@
+
 import { CartProvider } from "@/lib/cart-context";
 import { WishlistProvider } from "@/lib/wishlist-context";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,11 +14,11 @@ import { QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <CartProvider>
-            <WishlistProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <CartProvider>
+          <WishlistProvider>
+            <div className="min-h-screen bg-gray-50">
               <Switch>
                 <Route path="/" component={Home} />
                 <Route path="/products" component={Products} />
@@ -25,12 +26,12 @@ function App() {
                 <Route path="/wishlist" component={Wishlist} />
                 <Route component={NotFound} />
               </Switch>
-            </WishlistProvider>
-          </CartProvider>
-        </TooltipProvider>
-        <Toaster />
-      </QueryClientProvider>
-    </div>
+            </div>
+            <Toaster />
+          </WishlistProvider>
+        </CartProvider>
+      </TooltipProvider>
+    </QueryClientProvider>
   );
 }
 
