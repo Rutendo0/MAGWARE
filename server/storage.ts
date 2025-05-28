@@ -418,7 +418,6 @@ export class MemStorage implements IStorage {
         featured: false,
         specifications: "20V/115mm"
       },
-
       {
         name: "Genarator Sets",
         description: "Reliable generator sets for residential and commercial use",
@@ -814,8 +813,7 @@ export class MemStorage implements IStorage {
   async updateCartItemQuantity(id: number, quantity: number): Promise<CartItem | undefined> {
     const item = this.cartItems.get(id);
     if (item) {
-      const updatedItem = { ...item, quantity };
-      this.cartItems.set(id, updatedItem);
+      const updatedItem = { ...item, quantity };this.cartItems.set(id, updatedItem);
       return updatedItem;
     }
     return undefined;
