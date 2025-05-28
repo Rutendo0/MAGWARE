@@ -88,7 +88,7 @@ export class MemStorage implements IStorage {
         price: "18.50",
         category: "Paints & Finishes",
         brand: "Splash",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.16 (1).jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.16 (1).JPG",
         inStock: true,
         featured: true,
         specifications: "Weather resistant, glossy finish, suitable for all wood types"
@@ -296,7 +296,7 @@ export class MemStorage implements IStorage {
         price: "340.00",
         category: "Hand Tools",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.20 (1).jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.20 (1).JPG",
         inStock: true,
         featured: false,
         specifications: "High-quality steel construction, ergonomic handles"
@@ -353,7 +353,7 @@ export class MemStorage implements IStorage {
         price: "5.00",
         category: "Electrical",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.17.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.17.JPG",
         inStock: true,
         featured: true,
         specifications: "Lasting 5-6 hours with no power"
@@ -377,7 +377,7 @@ export class MemStorage implements IStorage {
         price: "32.00",
         category: "Building Materials",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.21.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.21.JPG",
         inStock: true,
         featured: false,
         specifications: "Weather resistant, fast curing, multi-surface compatibility"
@@ -389,7 +389,7 @@ export class MemStorage implements IStorage {
         price: "85.00",
         category: "Security",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.17 (1).jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.17 (1).JPG",
         inStock: true,
         featured: true,
         specifications: "For gas installations, high-quality materials, easy installation"
@@ -401,7 +401,7 @@ export class MemStorage implements IStorage {
         price: "55.00",
         category: "Garden Tools",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.20.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.20.JPG",
         inStock: true,
         featured: false,
         specifications: "Rust-resistant coating, ergonomic design, professional grade"
