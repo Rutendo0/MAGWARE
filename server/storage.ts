@@ -101,7 +101,7 @@ export class MemStorage implements IStorage {
         price: "12.00",
         category: "Building Materials",
         brand: "MAG-GRIP",
-        imageUrl: "@assets/IMG-20250419-WA0011.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0011.jpg",
         inStock: true,
         featured: true,
         specifications: "Quick curing 2-4 hours, premixed powder form, smooth application"
@@ -113,7 +113,7 @@ export class MemStorage implements IStorage {
         price: "12.00",
         category: "Building Materials", 
         brand: "MAG-GRIP",
-        imageUrl: "@assets/IMG-20250419-WA0012.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0012.jpg",
         inStock: true,
         featured: false,
         specifications: "Fast set easy application, bond strength for ceramic & stone"
@@ -125,7 +125,7 @@ export class MemStorage implements IStorage {
         price: "15.00",
         category: "Building Materials",
         brand: "MAG-GRIP", 
-        imageUrl: "@assets/IMG-20250419-WA0013.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0013.jpg",
         inStock: true,
         featured: false,
         specifications: "Incomparable strength, extremely low maintenance, easy to clean"
@@ -139,7 +139,7 @@ export class MemStorage implements IStorage {
         originalPrice: "120.00",
         category: "Hand Tools",
         brand: "Professional",
-        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.31.17.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.17.JPG",
         inStock: true,
         featured: true,
         specifications: "Bulk pricing available, professional grade tools"
@@ -153,7 +153,7 @@ export class MemStorage implements IStorage {
         originalPrice: "180.00",
         category: "Power Tools",
         brand: "WADFOW",
-        imageUrl: "@assets/IMG-20250419-WA0015.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0015.jpg",
         inStock: true,
         featured: true,
         specifications: "62cc displacement, 3.8HP, 9000rpm max speed, includes line spool & blade"
@@ -166,7 +166,7 @@ export class MemStorage implements IStorage {
         price: "850.00",
         category: "Solar Equipment",
         brand: "MAGWARE",
-        imageUrl: "@assets/IMG-20250419-WA0016.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0016.jpg",
         inStock: true,
         featured: true,
         specifications: "Complete installation package, refer clients & earn cash back"
@@ -177,7 +177,7 @@ export class MemStorage implements IStorage {
         price: "850.00",
         category: "Solar Equipment",
         brand: "MAGWARE",
-        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.31.15 (2).jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.15 (2).JPG",
         inStock: true,
         featured: false,
         specifications: "Complete installation package, refer clients & earn cash back"
@@ -188,7 +188,7 @@ export class MemStorage implements IStorage {
         price: "850.00",
         category: "Solar Equipment",
         brand: "MAGWARE",
-        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.31.19.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.19.JPG",
         inStock: true,
         featured: false,
         specifications: "Complete installation package, refer clients & earn cash back"
@@ -199,7 +199,7 @@ export class MemStorage implements IStorage {
         price: "850.00",
         category: "Solar Equipment",
         brand: "MAGWARE",
-        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.31.20.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.20.JPG",
         inStock: true,
         featured: false,
         specifications: "Complete installation package, refer clients & earn cash back"
@@ -210,7 +210,7 @@ export class MemStorage implements IStorage {
         price: "850.00",
         category: "Solar Equipment",
         brand: "MAGWARE",
-        imageUrl: "@assets/IMG-20250419-WA0022.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0022.jpg",
         inStock: true,
         featured: false,
         specifications: "Complete installation package, refer clients & earn cash back"
@@ -223,7 +223,7 @@ export class MemStorage implements IStorage {
         price: "320.00",
         category: "Power Tools",
         brand: "TOTAL",
-        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.49.22. (1)jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.22 (1).JPG",
         inStock: true,
         featured: true,
         specifications: "Professional grade tools, refer clients & earn cash back"
@@ -236,7 +236,7 @@ export class MemStorage implements IStorage {
         price: "195.00",
         category: "Power Tools",
         brand: "WADFOW",
-        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.31.15 (1).jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.15 (1).JPG",
         inStock: true,
         featured: true,
         specifications: "Impact function, 20V batteries, complete tool case, drill bits included"
@@ -249,7 +249,7 @@ export class MemStorage implements IStorage {
         price: "22.00",
         category: "Building Materials",
         brand: "Rhi-Lite",
-        imageUrl: "@assets/IMG-20250419-WA0019.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0019.jpg",
         inStock: true,
         featured: false,
         specifications: "15 year warranty, 100% assurance, high strength interior/exterior"
@@ -307,7 +307,7 @@ export class MemStorage implements IStorage {
         price: "320.00",
         category: "Power Tools",
         brand: "TOTAL",
-        imageUrl: "@assets/IMG-20250419-WA0023.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0023.jpg",
         inStock: true,
         featured: false,
         specifications: "Professional grade tools, refer clients & earn cash back"
@@ -318,7 +318,7 @@ export class MemStorage implements IStorage {
         price: "14.00",
         category: "Power Tools",
         brand: "TOTAL",
-        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.49.21. (1)jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.21 (1).JPG",
         inStock: true,
         featured: false,
         specifications: "3M length, 600A peak current, heavy-duty clamps"
@@ -329,7 +329,7 @@ export class MemStorage implements IStorage {
         price: "50.00",
         category: "Power Tools",
         brand: "TOTAL",
-        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.49.24 (1).jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.24 (1).JPG",
         inStock: true,
         featured: false,
         specifications: "Smart charging technology, LED indicators, compact design"

@@ -67,7 +67,14 @@ export default function Header() {
                 <img 
                   src="/attached_assets/magware-logo.png" 
                   alt="MAGWARE Logo" 
-                  className="w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl border-2 border-white/20 transform transition-all duration-300 group-hover:scale-105"
+                  className="w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl border-4 border-white/30 transform transition-all duration-300 group-hover:scale-105 object-cover bg-white"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.dataset.fallbackUsed) {
+                      target.dataset.fallbackUsed = "true";
+                      target.style.display = "none";
+                    }
+                  }}
                 />
                 {/* Quality indicator dot */}
                 <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full shadow-xl border-2 border-white animate-pulse flex items-center justify-center">
