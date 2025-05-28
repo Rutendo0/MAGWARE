@@ -205,7 +205,7 @@ export default function Products() {
               <Card key={product.id} className="hover:shadow-xl transition-shadow group">
                 <div className="relative overflow-hidden">
                   <img
-                    src={product.imageUrl?.replace('@assets/', '/attached_assets/') || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400&auto=format&fit=crop"}
+                    src={product.imageUrl?.replace('@assets/', '/attached_assets/').replace('/attached_assets/attached_assets/', '/attached_assets/') || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400&auto=format&fit=crop"}
                     alt={product.name}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"

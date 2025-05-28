@@ -1,10 +1,14 @@
 import express, { type Request, Response, NextFunction } from "express";
+import path from "path";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Serve static assets
+app.use('/attached_assets', express.static(path.join(process.cwd(), 'attached_assets')));
 
 // Serve static files for product images BEFORE other middleware
 app.use('/attached_assets', express.static('attached_assets'));
@@ -65,9 +69,9 @@ app.use((req, res, next) => {
   const port = 5000;
   server.listen({
     port:process.env.PORT || 5000,
-    host: "127.0.0.1",
+    host: "0.0.0.0",
 
   }, () => {
-    log(`serving on port  http://127.0.0.1:${port}`);
+    log(`serving on port  http://0.0.0.0:${port}`);
   });
 })();
