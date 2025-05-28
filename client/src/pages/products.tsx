@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useLocation } from "wouter";
 import Header from "@/components/header";
@@ -37,7 +37,17 @@ const categories = [
 
 export default function Products() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [debouncedSearchQuery, setDebouncedSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
+
+  // Debounce search query to prevent excessive API calls
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearchQuery(searchQuery);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
   const [location, setLocation] = useLocation();
   const { addToCart } = useCart();
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
@@ -58,21 +68,39 @@ export default function Products() {
   }, [location]);
 
   const { data: products = [], isLoading } = useQuery({
-    queryKey: ["/api/products", selectedCategory, searchQuery],
+    queryKey: ["/api/products", selectedCategory, debouncedSearchQuery],
     queryFn: async () => {
       const params = new URLSearchParams();
-      if (searchQuery) {
-        params.append('search', searchQuery);
+      if (debouncedSearchQuery) {
+        params.append('search', debouncedSearchQuery);
       }
       
-      if (selectedCategory === "All Categories") {
-        const response = await fetch(`/api/products?${params.toString()}`);
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      
+      try {
+        const url = selectedCategory === "All Categories" 
+          ? `/api/products?${params.toString()}`
+          : `/api/products/category/${encodeURIComponent(selectedCategory)}?${params.toString()}`;
+          
+        const response = await fetch(url, {
+          signal: controller.signal
+        });
+        
+        clearTimeout(timeoutId);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
         return response.json();
-      } else {
-        const response = await fetch(`/api/products/category/${encodeURIComponent(selectedCategory)}?${params.toString()}`);
-        return response.json();
+      } catch (error) {
+        clearTimeout(timeoutId);
+        throw error;
       }
     },
+    staleTime: 5 * 60 * 1000, // 5 minutes
+    cacheTime: 10 * 60 * 1000, // 10 minutes
   });
 
   // Products are already filtered on the server side, no need for client-side filtering
@@ -177,13 +205,17 @@ export default function Products() {
               <Card key={product.id} className="hover:shadow-xl transition-shadow group">
                 <div className="relative overflow-hidden">
                   <img
-                    src={product.imageUrl?.replace('@assets/', '/attached_assets/') || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400"}
+                    src={product.imageUrl?.replace('@assets/', '/attached_assets/') || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400&auto=format&fit=crop"}
                     alt={product.name}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
+                    decoding="async"
                     onError={(e) => {
-                      console.log(`Failed to load image for ${product.name}:`, product.imageUrl);
-                      e.currentTarget.src = "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400";
+                      const target = e.currentTarget;
+                      if (!target.dataset.fallbackUsed) {
+                        target.dataset.fallbackUsed = "true";
+                        target.src = "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400&auto=format&fit=crop&q=80";
+                      }
                     }}
                   />
                   {product.featured && (
@@ -241,6 +273,16 @@ export default function Products() {
           <div className="text-center py-12">
             <h3 className="text-xl font-semibold text-gray-900 mb-2">No products found</h3>
             <p className="text-magware-gray">Try adjusting your search or filter criteria.</p>
+            <Button
+              onClick={() => {
+                setSearchQuery("");
+                setSelectedCategory("All Categories");
+              }}
+              variant="outline"
+              className="mt-4"
+            >
+              Clear Filters
+            </Button>
           </div>
         )}
       </div>
