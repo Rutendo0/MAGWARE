@@ -139,7 +139,7 @@ export class MemStorage implements IStorage {
         originalPrice: "120.00",
         category: "Hand Tools",
         brand: "Professional",
-        imageUrl: "@assets/IMG-20250419-WA0014.jpg",
+        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.31.17.jpeg",
         inStock: true,
         featured: true,
         specifications: "Bulk pricing available, professional grade tools"
@@ -171,6 +171,50 @@ export class MemStorage implements IStorage {
         featured: true,
         specifications: "Complete installation package, refer clients & earn cash back"
       },
+       {
+        name: "Complete Solar Equipment",
+        description: "Professional solar installation packages with equipment",
+        price: "850.00",
+        category: "Solar Equipment",
+        brand: "MAGWARE",
+        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.31.15 (2).jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Complete installation package, refer clients & earn cash back"
+      },
+       {
+        name: "Complete Solar Equipment & Installation Package",
+        description: "Professional solar installation packages with equipment",
+        price: "850.00",
+        category: "Solar Equipment",
+        brand: "MAGWARE",
+        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.31.19.jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Complete installation package, refer clients & earn cash back"
+      },
+       {
+        name: "Complete Solar Equipment & Installation Package",
+        description: "Professional solar installation packages with equipment",
+        price: "850.00",
+        category: "Solar Equipment",
+        brand: "MAGWARE",
+        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.31.20.jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Complete installation package, refer clients & earn cash back"
+      },
+       {
+        name: "Complete Solar Equipment & Installation ",
+        description: "Professional solar installation packages with equipment",
+        price: "850.00",
+        category: "Solar Equipment",
+        brand: "MAGWARE",
+        imageUrl: "@assets/IMG-20250419-WA0022.jpg",
+        inStock: true,
+        featured: false,
+        specifications: "Complete installation package, refer clients & earn cash back"
+      },
 
       // TOTAL Power Tools
       {
@@ -179,7 +223,7 @@ export class MemStorage implements IStorage {
         price: "320.00",
         category: "Power Tools",
         brand: "TOTAL",
-        imageUrl: "@assets/IMG-20250419-WA0017.jpg",
+        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.49.22. (1)jpeg",
         inStock: true,
         featured: true,
         specifications: "Professional grade tools, refer clients & earn cash back"
@@ -192,7 +236,7 @@ export class MemStorage implements IStorage {
         price: "195.00",
         category: "Power Tools",
         brand: "WADFOW",
-        imageUrl: "@assets/IMG-20250419-WA0018.jpg",
+        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.31.15 (1).jpeg",
         inStock: true,
         featured: true,
         specifications: "Impact function, 20V batteries, complete tool case, drill bits included"
@@ -217,7 +261,18 @@ export class MemStorage implements IStorage {
         price: "22.00",
         category: "Building Materials",
         brand: "Rhi-Bond",
-        imageUrl: "/attached_assets/IMG-20250419-WA0026.jpg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0020.jpg",
+        inStock: true,
+        featured: false,
+        specifications: "15 year warranty, 100% assurance, suitable for all wall types"
+      },
+      {
+        name: "Multi-Purpose Plaster 20kg", 
+        description: "Versatile plaster for various construction applications",
+        price: "22.00",
+        category: "Building Materials",
+        brand: "Rhi-Bond",
+        imageUrl: "/attached_assets/IMG-20250419-WA0021.jpg",
         inStock: true,
         featured: false,
         specifications: "15 year warranty, 100% assurance, suitable for all wall types"
@@ -230,10 +285,54 @@ export class MemStorage implements IStorage {
         price: "75.00",
         category: "Hand Tools",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.14.jpeg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0018.jpg",
         inStock: true,
-        featured: true,
+        featured: false,
         specifications: "High-quality steel construction, ergonomic handles"
+      },
+      {
+        name: "Table Saw with Stand",
+        description: "Professional table saw with adjustable stand for precision cutting",
+        price: "340.00",
+        category: "Hand Tools",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.20 (1).jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "High-quality steel construction, ergonomic handles"
+      },
+      {
+        name: "TOTAL Professional Power Tools & Equipment",
+        description: "Complete TOTAL power tools collection for professionals",
+        price: "320.00",
+        category: "Power Tools",
+        brand: "TOTAL",
+        imageUrl: "@assets/IMG-20250419-WA0023.jpg",
+        inStock: true,
+        featured: false,
+        specifications: "Professional grade tools, refer clients & earn cash back"
+      },
+      {
+        name: "Booster Cable Set",
+        description: "Heavy-duty booster cables for automotive use",
+        price: "14.00",
+        category: "Power Tools",
+        brand: "TOTAL",
+        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.49.21. (1)jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "3M length, 600A peak current, heavy-duty clamps"
+      },
+      {
+        name: "Battery Charger 12V/24V",
+        description: "Automatic battery charger for 12V and 24V batteries",
+        price: "50.00",
+        category: "Power Tools",
+        brand: "TOTAL",
+        imageUrl: "@assets/WhatsApp Image 2025-05-14 at 10.49.24 (1).jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Smart charging technology, LED indicators, compact design"
       },
 
       {
@@ -242,22 +341,22 @@ export class MemStorage implements IStorage {
         price: "28.00",
         category: "Paints & Finishes",
         brand: "Professional",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.15.jpeg",
+        imageUrl: "/attached_assets/IMG-20250419-WA0010.jpg",
         inStock: true,
         featured: false,
         specifications: "Various sizes, synthetic bristles, smooth finish rollers"
       },
 
       {
-        name: "Electrical Wiring Components",
-        description: "Complete electrical wiring supplies and components",
-        price: "45.00",
+        name: "Emergency Lighting & Power Backup",
+        description: "Reliable emergency lighting and power backup solutions",
+        price: "5.00",
         category: "Electrical",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.16.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.17.jpeg",
         inStock: true,
         featured: true,
-        specifications: "Copper wiring, safety certified, various gauges available"
+        specifications: "Lasting 5-6 hours with no power"
       },
 
       {
@@ -266,34 +365,34 @@ export class MemStorage implements IStorage {
         price: "65.00",
         category: "Plumbing",
         brand: "Professional",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.17.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.23.jpeg",
         inStock: true,
         featured: true,
         specifications: "PVC and metal fittings, various pipe sizes, leak-proof joints"
       },
 
       {
-        name: "Construction Adhesives & Sealants",
-        description: "Industrial-grade adhesives and sealants for construction",
+        name: "Wash and shine hard wearing",
+        description: "High-performance wash and shine for household and industrial use",
         price: "32.00",
         category: "Building Materials",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.18.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.21.jpeg",
         inStock: true,
         featured: false,
         specifications: "Weather resistant, fast curing, multi-surface compatibility"
       },
 
       {
-        name: "Security Hardware & Locks",
-        description: "Premium security hardware for doors and windows",
+        name: "Security Hardware for gas",
+        description: "Premium security hardware for gas installations",
         price: "85.00",
         category: "Security",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.19.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.17 (1).jpeg",
         inStock: true,
         featured: true,
-        specifications: "High-security locks, anti-pick technology, weather resistant"
+        specifications: "For gas installations, high-quality materials, easy installation"
       },
 
       {
@@ -309,27 +408,38 @@ export class MemStorage implements IStorage {
       },
 
       {
-        name: "Measuring & Level Tools",
-        description: "Precision measuring and leveling tools for accurate work",
-        price: "42.00",
+        name: "Angle Grinders & Accessories",
+        description: "Professional angle grinders with various accessories",
+         price: "95.00",
         category: "Hand Tools",
         brand: "Professional",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.31.21.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.24.jpeg",
         inStock: true,
         featured: false,
-        specifications: "High accuracy, bubble levels, metric and imperial measurements"
+        specifications: "20V/115mm"
       },
 
       {
-        name: "Fasteners & Hardware Assortment",
-        description: "Comprehensive assortment of bolts, screws, and fasteners",
-        price: "38.00",
+        name: "Genarator Sets",
+        description: "Reliable generator sets for residential and commercial use",
+        price: "1060.00",
         category: "Fasteners",
         brand: "MAGWARE",
         imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.14.jpeg",
         inStock: true,
         featured: true,
-        specifications: "Stainless steel, various sizes, corrosion resistant"
+        specifications: "Silent operation, fuel efficient, various power outputs available"
+      },
+      {
+        name: "Genarator Sets",
+        description: "Reliable generator sets for residential and commercial use",
+        price: "2310.00",
+        category: "Fasteners",
+        brand: "MAGWARE",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.18 (1).jpeg",
+        inStock: true,
+        featured: false,
+        specifications: "Silent operation, fuel efficient, various power outputs available"
       },
 
       {
@@ -357,15 +467,15 @@ export class MemStorage implements IStorage {
       },
 
       {
-        name: "Concrete & Masonry Tools",
-        description: "Professional tools for concrete and masonry work",
-        price: "68.00",
+        name: "Cutting Discs",
+        description: "High-quality cutting discs for various materials",
+        price: "2.00",
         category: "Hand Tools",
         brand: "Professional",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.17.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.21.jpeg",
         inStock: true,
         featured: false,
-        specifications: "Heavy-duty construction, precision finishing, ergonomic handles"
+        specifications: "Cutting disc 230mm metal"
       },
 
       {
@@ -422,19 +532,19 @@ export class MemStorage implements IStorage {
         price: "88.00",
         category: "Plumbing",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.23.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.15.jpeg",
         inStock: true,
         featured: true,
         specifications: "Corrosion resistant, efficient water flow, easy maintenance"
       },
 
       {
-        name: "Lighting Fixtures & Electrical",
-        description: "Modern lighting fixtures and electrical components",
+        name: "Modern Bedside Lamps",
+        description: "Stylish bedside lamps with adjustable brightness",
         price: "72.00",
         category: "Electrical",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.24.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.18 (2).jpeg",
         inStock: true,
         featured: true,
         specifications: "LED compatible, energy efficient, modern designs"
