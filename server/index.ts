@@ -57,6 +57,7 @@ app.use((req, res, next) => {
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
+  app.use('/attached_assets', express.static(path.join(process.cwd(), 'attached_assets')));
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
