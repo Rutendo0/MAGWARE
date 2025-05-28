@@ -10,19 +10,139 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Product routes
   app.get("/api/products", async (req, res) => {
     try {
-      const products = await storage.getProducts();
+      const search = req.query.search as string;
+
+      // Return mock data for now
+      let products = [
+        {
+          id: 1,
+          name: "Professional Drill Set",
+          description: "High-quality cordless drill with multiple bits",
+          price: 89.99,
+          originalPrice: 120.00,
+          category: "Power Tools",
+          imageUrl: "/attached_assets/IMG-20250419-WA0009.jpg",
+          featured: true,
+          inStock: true
+        },
+        {
+          id: 2,
+          name: "Hammer Set",
+          description: "Professional grade hammer collection",
+          price: 45.99,
+          category: "Hand Tools", 
+          imageUrl: "/attached_assets/IMG-20250419-WA0010.jpg",
+          featured: false,
+          inStock: true
+        },
+        {
+          id: 3,
+          name: "LED Work Light",
+          description: "Bright LED work light for construction sites",
+          price: 25.99,
+          category: "Electrical",
+          imageUrl: "/attached_assets/IMG-20250419-WA0011.jpg",
+          featured: true,
+          inStock: true
+        },
+        {
+          id: 4,
+          name: "Solar Panel Kit",
+          description: "Complete solar panel installation kit",
+          price: 299.99,
+          category: "Solar Equipment",
+          imageUrl: "/attached_assets/IMG-20250419-WA0012.jpg",
+          featured: true,
+          inStock: true
+        },
+        {
+          id: 5,
+          name: "Paint Roller Set",
+          description: "Professional paint roller set with multiple sizes",
+          price: 19.99,
+          category: "Paints & Finishes",
+          imageUrl: "/attached_assets/IMG-20250419-WA0013.jpg",
+          featured: false,
+          inStock: true
+        },
+        {
+          id: 6,
+          name: "Security Camera",
+          description: "HD security camera with night vision",
+          price: 79.99,
+          category: "Security",
+          imageUrl: "/attached_assets/IMG-20250419-WA0014.jpg",
+          featured: true,
+          inStock: true
+        }
+      ];
+
+      // Filter by search query if provided
+      if (search) {
+        const searchLower = search.toLowerCase();
+        products = products.filter(product => 
+          product.name.toLowerCase().includes(searchLower) ||
+          product.description.toLowerCase().includes(searchLower) ||
+          product.category.toLowerCase().includes(searchLower)
+        );
+      }
+
       res.json(products);
     } catch (error) {
-      res.status(500).json({ message: "Failed to fetch products" });
+      res.status(500).json({ error: "Failed to fetch products" });
     }
   });
 
   app.get("/api/products/featured", async (req, res) => {
     try {
-      const products = await storage.getFeaturedProducts();
-      res.json(products);
+      // Return mock featured products
+      const featuredProducts = [
+        {
+          id: 1,
+          name: "Professional Drill Set",
+          description: "High-quality cordless drill with multiple bits",
+          price: 89.99,
+          originalPrice: 120.00,
+          category: "Power Tools",
+          imageUrl: "/attached_assets/IMG-20250419-WA0009.jpg",
+          featured: true,
+          inStock: true
+        },
+        {
+          id: 3,
+          name: "LED Work Light", 
+          description: "Bright LED work light for construction sites",
+          price: 25.99,
+          category: "Electrical",
+          imageUrl: "/attached_assets/IMG-20250419-WA0011.jpg",
+          featured: true,
+          inStock: true
+        },
+        {
+          id: 4,
+          name: "Solar Panel Kit",
+          description: "Complete solar panel installation kit",
+          price: 299.99,
+          category: "Solar Equipment",
+          imageUrl: "/attached_assets/IMG-20250419-WA0012.jpg",
+          featured: true,
+          inStock: true
+        },
+        {
+          id: 6,
+          name: "Security Camera",
+          description: "HD security camera with night vision",
+          price: 79.99,
+          category: "Security",
+          imageUrl: "/attached_assets/IMG-20250419-WA0014.jpg",
+          featured: true,
+          inStock: true
+        }
+      ];
+
+      res.json(featuredProducts);
     } catch (error) {
-      res.status(500).json({ message: "Failed to fetch featured products" });
+      res.status(500).json({ error: "Failed to fetch featured products" });
     }
   });
 

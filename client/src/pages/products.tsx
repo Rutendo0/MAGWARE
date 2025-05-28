@@ -43,23 +43,33 @@ export default function Products() {
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const { toast } = useToast();
 
-  // Handle URL category parameter
+  // Handle URL parameters
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const categoryParam = params.get('category');
+    const searchParam = params.get('search');
+    
     if (categoryParam) {
       setSelectedCategory(categoryParam);
+    }
+    if (searchParam) {
+      setSearchQuery(searchParam);
     }
   }, [location]);
 
   const { data: products = [], isLoading } = useQuery({
-    queryKey: ["/api/products", selectedCategory],
+    queryKey: ["/api/products", selectedCategory, searchQuery],
     queryFn: async () => {
+      const params = new URLSearchParams();
+      if (searchQuery) {
+        params.append('search', searchQuery);
+      }
+      
       if (selectedCategory === "All Categories") {
-        const response = await fetch("/api/products");
+        const response = await fetch(`/api/products?${params.toString()}`);
         return response.json();
       } else {
-        const response = await fetch(`/api/products/category/${encodeURIComponent(selectedCategory)}`);
+        const response = await fetch(`/api/products/category/${encodeURIComponent(selectedCategory)}?${params.toString()}`);
         return response.json();
       }
     },
@@ -170,10 +180,13 @@ export default function Products() {
               <Card key={product.id} className="hover:shadow-xl transition-shadow group">
                 <div className="relative overflow-hidden">
                   <img
-                    src={product.imageUrl?.replace('@assets/', '/attached_assets/') || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400"}
+                    src={product.imageUrl || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400"}
                     alt={product.name}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400";
+                    }}
                   />
                   {product.featured && (
                     <Badge className="absolute top-4 left-4 bg-magware-purple text-white">
