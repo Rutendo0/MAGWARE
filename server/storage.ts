@@ -532,7 +532,7 @@ export class MemStorage implements IStorage {
         price: "88.00",
         category: "Plumbing",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.15.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.15.JPG",
         inStock: true,
         featured: true,
         specifications: "Corrosion resistant, efficient water flow, easy maintenance"
