@@ -365,7 +365,7 @@ export class MemStorage implements IStorage {
         price: "65.00",
         category: "Plumbing",
         brand: "Professional",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.23.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.23.JPG",
         inStock: true,
         featured: true,
         specifications: "PVC and metal fittings, various pipe sizes, leak-proof joints"
@@ -413,7 +413,7 @@ export class MemStorage implements IStorage {
          price: "95.00",
         category: "Hand Tools",
         brand: "Professional",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.24.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.24.JPG",
         inStock: true,
         featured: false,
         specifications: "20V/115mm"
@@ -425,7 +425,7 @@ export class MemStorage implements IStorage {
         price: "1060.00",
         category: "Fasteners",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.14.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.14.JPG",
         inStock: true,
         featured: true,
         specifications: "Silent operation, fuel efficient, various power outputs available"
@@ -436,7 +436,7 @@ export class MemStorage implements IStorage {
         price: "2310.00",
         category: "Fasteners",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.18 (1).jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.18 (1).JPG",
         inStock: true,
         featured: false,
         specifications: "Silent operation, fuel efficient, various power outputs available"
@@ -448,7 +448,7 @@ export class MemStorage implements IStorage {
         price: "48.00",
         category: "Building Materials",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.15.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.15.JPG",
         inStock: true,
         featured: false,
         specifications: "Fire retardant, moisture resistant, easy installation"
@@ -460,7 +460,7 @@ export class MemStorage implements IStorage {
         price: "125.00",
         category: "Roofing",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.16.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.16.JPG",
         inStock: true,
         featured: true,
         specifications: "Weather resistant, long-lasting, various materials available"
@@ -472,7 +472,7 @@ export class MemStorage implements IStorage {
         price: "2.00",
         category: "Hand Tools",
         brand: "Professional",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.21.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.21.JPG",
         inStock: true,
         featured: false,
         specifications: "Cutting disc 230mm metal"
@@ -484,7 +484,7 @@ export class MemStorage implements IStorage {
         price: "52.00",
         category: "Safety",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.18.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.18.JPG",
         inStock: true,
         featured: true,
         specifications: "Safety certified, protective gear, high-visibility options"
@@ -496,7 +496,7 @@ export class MemStorage implements IStorage {
         price: "78.00",
         category: "Hand Tools",
         brand: "Professional",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.20.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.20.JPG",
         inStock: true,
         featured: false,
         specifications: "Precision cutting, smooth installation, professional results"
@@ -508,7 +508,7 @@ export class MemStorage implements IStorage {
         price: "62.00",
         category: "Hardware",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.21.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.21.JPG",
         inStock: true,
         featured: true,
         specifications: "Smooth operation, weather sealed, adjustable fittings"
@@ -520,7 +520,7 @@ export class MemStorage implements IStorage {
         price: "95.00",
         category: "HVAC",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.22.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.22.JPG",
         inStock: true,
         featured: false,
         specifications: "Energy efficient, quiet operation, easy installation"
@@ -544,7 +544,7 @@ export class MemStorage implements IStorage {
         price: "72.00",
         category: "Electrical",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.18 (2).jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.18 (2).JPG",
         inStock: true,
         featured: true,
         specifications: "LED compatible, energy efficient, modern designs"
@@ -556,7 +556,7 @@ export class MemStorage implements IStorage {
         price: "58.00",
         category: "Storage",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.25.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.25.JPG",
         inStock: true,
         featured: false,
         specifications: "Heavy-duty construction, modular design, space efficient"
@@ -568,7 +568,7 @@ export class MemStorage implements IStorage {
         price: "145.00",
         category: "Welding",
         brand: "Professional",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.27.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.27.JPG",
         inStock: true,
         featured: true,
         specifications: "Professional grade, various rod types, safety equipment included"
@@ -580,7 +580,7 @@ export class MemStorage implements IStorage {
         price: "115.00",
         category: "Automotive Tools",
         brand: "MAGWARE",
-        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.29.jpeg",
+        imageUrl: "/attached_assets/WhatsApp Image 2025-05-14 at 10.49.29.JPG",
         inStock: true,
         featured: true,
         specifications: "Precision tools, heavy-duty construction, professional grade"
