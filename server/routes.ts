@@ -78,7 +78,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       ];
 
       // Filter by search query if provided
-      if (search) {
+      if (search && typeof search === "string") {
         const searchLower = search.toLowerCase();
         products = products.filter(product => 
           product.name.toLowerCase().includes(searchLower) ||
@@ -89,6 +89,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json(products);
     } catch (error) {
+      console.error("Error fetching products:", error);
       res.status(500).json({ error: "Failed to fetch products" });
     }
   });

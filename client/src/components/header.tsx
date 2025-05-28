@@ -18,6 +18,7 @@ export default function Header() {
     e.preventDefault();
     if (searchQuery.trim()) {
       navigate(`/products?search=${encodeURIComponent(searchQuery)}`);
+      setSearchQuery(""); // Clear search after navigation
     }
   };
 

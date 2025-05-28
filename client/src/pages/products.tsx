@@ -75,11 +75,8 @@ export default function Products() {
     },
   });
 
-  const filteredProducts = products.filter((product: any) => {
-    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         product.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesSearch;
-  });
+  // Products are already filtered on the server side, no need for client-side filtering
+  const filteredProducts = products;
 
   const handleAddToCart = async (productId: number, productName: string) => {
     try {
@@ -180,11 +177,12 @@ export default function Products() {
               <Card key={product.id} className="hover:shadow-xl transition-shadow group">
                 <div className="relative overflow-hidden">
                   <img
-                    src={product.imageUrl || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400"}
+                    src={product.imageUrl?.replace('@assets/', '/attached_assets/') || "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400"}
                     alt={product.name}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                     onError={(e) => {
+                      console.log(`Failed to load image for ${product.name}:`, product.imageUrl);
                       e.currentTarget.src = "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400";
                     }}
                   />
